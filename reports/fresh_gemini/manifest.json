@@ -1,0 +1,30 @@
+{
+  "mode": "gemini",
+  "files": [
+    {
+      "path": "ciphertexts.csv",
+      "bytes": 5927,
+      "sha256": "d1e61700893d654f83e08a97f94fd2ca6b7c24f3f6ece1d20d0639ca2050cac5"
+    },
+    {
+      "path": "decrypted_sessions.txt",
+      "bytes": 5096,
+      "sha256": "ef7515ec2bd72991f564af30cc5c0a126f3a0ad8dba1f91e132ab07f625f7d32"
+    },
+    {
+      "path": "key_recovery_proof.txt",
+      "bytes": 2110,
+      "sha256": "8814f3d7745692cecdffb879fba63943c16f77b3d7096c7095dc457d0cfbc053"
+    },
+    {
+      "path": "result.json",
+      "bytes": 51435,
+      "sha256": "bd24383759496b0e952e79aaacf9b82bfb482c8ad38c1a40a864275401eb43b8"
+    },
+    {
+      "path": "summary.csv",
+      "bytes": 226,
+      "sha256": "8f19bfd8fb2952a1c46f6ecfce13ba515044b943930e8ff33378237c52bfae52"
+    }
+  ]
+}

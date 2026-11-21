@@ -1,0 +1,1342 @@
+{
+  "mode": "gemini",
+  "model": "gemini-3.5-flash-lite",
+  "generation": "fresh Gemini response over HTTPS",
+  "transport": "real IPv4 loopback TCP",
+  "tcp_port": 52313,
+  "run_time_utc": "2026-11-18T23:17:22+00:00",
+  "requested_cases": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "completed_cases": 5,
+  "error": null,
+  "sessions": [
+    {
+      "session": 1,
+      "case": {
+        "id": 1,
+        "username": "Rohaan",
+        "mood": 3,
+        "concern": "My final exams start next week and I cannot sleep because I keep thinking I will fail."
+      },
+      "analysis": {
+        "a": 7,
+        "b": 6,
+        "a_inverse": 15,
+        "chi_squared": 35.23681547648451,
+        "runner_up_chi_squared": 1309.4329906785367,
+        "letters": 850,
+        "plaintext": "WELCOME TO THE CRYPTOGRAPHY LAB ROHAAN WHERE WE ALWAYS APPRECIATE A SHARP MIND EVEN WHEN IT IS FEELING A BIT OVERWHELMED BY LOOMING DEADLINES IT IS COMPLETELY NORMAL TO EXPERIENCE A DIP IN YOUR MOOD AND RESTLESS NIGHTS WHEN FINAL EXAMS ARE JUST AROUND THE CORNER AND THE PRESSURE TO SUCCEED FEELS HEAVY SOMETIMES BREAKING DOWN YOUR STUDY MATERIAL INTO SMALLER MANAGEABLE CHUNKS CAN HELP QUIET RACING THOUGHTS AND RESTORE A SENSE OF CONTROL BEFORE BEDTIME REMEMBER TO GIVE YOURSELF PERMISSION TO STEP AWAY FROM THE BOOKS OCCASIONALLY TO CLEAR YOUR HEAD WITH A SHORT WALK OR SOME DEEP BREATHING EXERCISES OUR TEAM HERE IS CHEERING YOU ON FROM THE SIDELINES CONFIDENT IN YOUR ABILITY TO TACKLE THESE EXAMS ONE STEP AT A TIME TRY TO ESTABLISH A CALMING WINDDOWN ROUTINE TONIGHT PERHAPS READING SOMETHING UNRELATED TO YOUR COURSEWORK TO HELP SIGNAL TO YOUR BRAIN THAT IT IS TIME TO REST YOU HAVE PUT IN THE HARD WORK LEADING UP TO THIS POINT ROHAAN AND YOU ARE FAR MORE CAPABLE THAN YOUR ANXIOUS THOUGHTS MIGHT BE LETTING ON RIGHT NOW",
+        "top_candidates": [
+          {
+            "score": 35.23681547648451,
+            "a": 7,
+            "b": 6
+          },
+          {
+            "score": 1309.4329906785367,
+            "a": 5,
+            "b": 22
+          },
+          {
+            "score": 1346.7557870158591,
+            "a": 23,
+            "b": 21
+          },
+          {
+            "score": 1462.034633085475,
+            "a": 9,
+            "b": 8
+          },
+          {
+            "score": 1655.55761486571,
+            "a": 25,
+            "b": 13
+          }
+        ],
+        "proof": [
+          "A=0 ... Z=25; C=(a*P+b) mod 26.",
+          "312 valid keys scored against English; E/T are candidate correspondences, not guaranteed frequency ranks.",
+          "Winning correspondence E->I, T->J.",
+          "4a+b=8; 19a+b=9 (mod 26).",
+          "15a=1 (mod 26); inverse(15)=7 because 15*7=4*26+1.",
+          "a=7*1 mod 26=7; b=8-4*7 mod 26=6.",
+          "26 = 3 * 7 + 5",
+          "7 = 1 * 5 + 2",
+          "5 = 2 * 2 + 1",
+          "2 = 2 * 1 + 0",
+          "inverse(a)=15; 7*15=4*26+1.",
+          "P=15*(C-6) mod 26."
+        ],
+        "frequencies": [
+          {
+            "letter": "A",
+            "cipher_count": 73,
+            "cipher_percent": 8.588235294117647,
+            "plain_percent": 8.0,
+            "english_percent": 8.167
+          },
+          {
+            "letter": "B",
+            "cipher_count": 25,
+            "cipher_percent": 2.9411764705882355,
+            "plain_percent": 1.7647058823529411,
+            "english_percent": 1.492
+          },
+          {
+            "letter": "C",
+            "cipher_count": 51,
+            "cipher_percent": 6.0,
+            "plain_percent": 2.588235294117647,
+            "english_percent": 2.782
+          },
+          {
+            "letter": "D",
+            "cipher_count": 41,
+            "cipher_percent": 4.823529411764706,
+            "plain_percent": 2.9411764705882355,
+            "english_percent": 4.253
+          },
+          {
+            "letter": "E",
+            "cipher_count": 16,
+            "cipher_percent": 1.8823529411764706,
+            "plain_percent": 12.705882352941176,
+            "english_percent": 12.702
+          },
+          {
+            "letter": "F",
+            "cipher_count": 35,
+            "cipher_percent": 4.117647058823529,
+            "plain_percent": 1.1764705882352942,
+            "english_percent": 2.228
+          },
+          {
+            "letter": "G",
+            "cipher_count": 68,
+            "cipher_percent": 8.0,
+            "plain_percent": 2.4705882352941178,
+            "english_percent": 2.015
+          },
+          {
+            "letter": "H",
+            "cipher_count": 21,
+            "cipher_percent": 2.4705882352941178,
+            "plain_percent": 4.823529411764706,
+            "english_percent": 6.094
+          },
+          {
+            "letter": "I",
+            "cipher_count": 108,
+            "cipher_percent": 12.705882352941176,
+            "plain_percent": 6.823529411764706,
+            "english_percent": 6.966
+          },
+          {
+            "letter": "J",
+            "cipher_count": 72,
+            "cipher_percent": 8.470588235294118,
+            "plain_percent": 0.11764705882352941,
+            "english_percent": 0.153
+          },
+          {
+            "letter": "K",
+            "cipher_count": 58,
+            "cipher_percent": 6.823529411764706,
+            "plain_percent": 0.8235294117647058,
+            "english_percent": 0.772
+          },
+          {
+            "letter": "L",
+            "cipher_count": 5,
+            "cipher_percent": 0.5882352941176471,
+            "plain_percent": 4.117647058823529,
+            "english_percent": 4.025
+          },
+          {
+            "letter": "M",
+            "cipher_count": 28,
+            "cipher_percent": 3.2941176470588234,
+            "plain_percent": 3.2941176470588234,
+            "english_percent": 2.406
+          },
+          {
+            "letter": "N",
+            "cipher_count": 15,
+            "cipher_percent": 1.7647058823529411,
+            "plain_percent": 6.705882352941177,
+            "english_percent": 6.749
+          },
+          {
+            "letter": "O",
+            "cipher_count": 1,
+            "cipher_percent": 0.11764705882352941,
+            "plain_percent": 8.588235294117647,
+            "english_percent": 7.507
+          },
+          {
+            "letter": "P",
+            "cipher_count": 10,
+            "cipher_percent": 1.1764705882352942,
+            "plain_percent": 2.4705882352941178,
+            "english_percent": 1.929
+          },
+          {
+            "letter": "Q",
+            "cipher_count": 27,
+            "cipher_percent": 3.176470588235294,
+            "plain_percent": 0.11764705882352941,
+            "english_percent": 0.095
+          },
+          {
+            "letter": "R",
+            "cipher_count": 1,
+            "cipher_percent": 0.11764705882352941,
+            "plain_percent": 7.176470588235294,
+            "english_percent": 5.987
+          },
+          {
+            "letter": "S",
+            "cipher_count": 22,
+            "cipher_percent": 2.588235294117647,
+            "plain_percent": 6.0,
+            "english_percent": 6.327
+          },
+          {
+            "letter": "T",
+            "cipher_count": 57,
+            "cipher_percent": 6.705882352941177,
+            "plain_percent": 8.470588235294118,
+            "english_percent": 9.056
+          },
+          {
+            "letter": "U",
+            "cipher_count": 22,
+            "cipher_percent": 2.588235294117647,
+            "plain_percent": 3.176470588235294,
+            "english_percent": 2.758
+          },
+          {
+            "letter": "V",
+            "cipher_count": 61,
+            "cipher_percent": 7.176470588235294,
+            "plain_percent": 0.5882352941176471,
+            "english_percent": 0.978
+          },
+          {
+            "letter": "W",
+            "cipher_count": 21,
+            "cipher_percent": 2.4705882352941178,
+            "plain_percent": 1.8823529411764706,
+            "english_percent": 2.36
+          },
+          {
+            "letter": "X",
+            "cipher_count": 5,
+            "cipher_percent": 0.5882352941176471,
+            "plain_percent": 0.5882352941176471,
+            "english_percent": 0.15
+          },
+          {
+            "letter": "Y",
+            "cipher_count": 7,
+            "cipher_percent": 0.8235294117647058,
+            "plain_percent": 2.588235294117647,
+            "english_percent": 1.974
+          },
+          {
+            "letter": "Z",
+            "cipher_count": 0,
+            "cipher_percent": 0.0,
+            "plain_percent": 0.0,
+            "english_percent": 0.074
+          }
+        ],
+        "note": "Language-fit ranking is not a probability; verify short or unusual text independently."
+      },
+      "decoded_username": "Rohaan",
+      "decoded_concern": "My final exams start next week and I cannot sleep because I keep thinking I will fail.",
+      "request": {
+        "username_enc": "PUWHWKWNWNWA",
+        "mood": 3,
+        "message_enc": "ITDRUGWWWRWAWNWMUGWPDKWNWTDBUGDBDIWNDUDIUGWAWPDKDIUGDDWPWPWFUGWNWAWIUGIRUGWBWNWAWAWHDIUGDBWMWPWPDGUGWUWPWBWNDPDBWPUGIRUGWFWPWPDGUGDIWKWRWAWFWRWAWDUGIRUGDDWRWMWMUGWWWNWRWMUA",
+        "api_key_enc": ""
+      },
+      "response": {
+        "ciphertext": "EIFUAMI JA JDI UVSHJAWVGHDS FGN VADGGT EDIVI EI GFEGSC GHHVIUKGJI G CDGVH MKTB IXIT EDIT KJ KC PIIFKTW G NKJ AXIVEDIFMIB NS FAAMKTW BIGBFKTIC KJ KC UAMHFIJIFS TAVMGF JA ILHIVKITUI G BKH KT SAQV MAAB GTB VICJFICC TKWDJC EDIT PKTGF ILGMC GVI RQCJ GVAQTB JDI UAVTIV GTB JDI HVICCQVI JA CQUUIIB PIIFC DIGXS CAMIJKMIC NVIGYKTW BAET SAQV CJQBS MGJIVKGF KTJA CMGFFIV MGTGWIGNFI UDQTYC UGT DIFH OQKIJ VGUKTW JDAQWDJC GTB VICJAVI G CITCI AP UATJVAF NIPAVI NIBJKMI VIMIMNIV JA WKXI SAQVCIFP HIVMKCCKAT JA CJIH GEGS PVAM JDI NAAYC AUUGCKATGFFS JA UFIGV SAQV DIGB EKJD G CDAVJ EGFY AV CAMI BIIH NVIGJDKTW ILIVUKCIC AQV JIGM DIVI KC UDIIVKTW SAQ AT PVAM JDI CKBIFKTIC UATPKBITJ KT SAQV GNKFKJS JA JGUYFI JDICI ILGMC ATI CJIH GJ G JKMI JVS JA ICJGNFKCD G UGFMKTW EKTBBAET VAQJKTI JATKWDJ HIVDGHC VIGBKTW CAMIJDKTW QTVIFGJIB JA SAQV UAQVCIEAVY JA DIFH CKWTGF JA SAQV NVGKT JDGJ KJ KC JKMI JA VICJ SAQ DGXI HQJ KT JDI DGVB EAVY FIGBKTW QH JA JDKC HAKTJ VADGGT GTB SAQ GVI PGV MAVI UGHGNFI JDGT SAQV GTLKAQC JDAQWDJC MKWDJ NI FIJJKTW AT VKWDJ TAE"
+      },
+      "checks": {
+        "key_matches": true,
+        "mood_matches": true,
+        "username_matches": true,
+        "concern_matches": true,
+        "reply_matches": true,
+        "reencryption_matches": true
+      },
+      "verified": true
+    },
+    {
+      "session": 2,
+      "case": {
+        "id": 2,
+        "username": "Rohaan",
+        "mood": 4,
+        "concern": "I moved to a new city for university and I have not made any friends yet, the weekends feel very empty."
+      },
+      "analysis": {
+        "a": 9,
+        "b": 8,
+        "a_inverse": 3,
+        "chi_squared": 40.986767089763994,
+        "runner_up_chi_squared": 1095.865768340145,
+        "letters": 635,
+        "plaintext": "WELCOME TO THE LAB ROHAAN WHERE WE ALWAYS APPRECIATE A FRIENDLY FACE JOINING OUR CRYPTOGRAPHIC TEAM MOVING TO A BRAND NEW CITY FOR UNIVERSITY IS A HUGE LIFE TRANSITION AND IT IS COMPLETELY NORMAL TO FEEL A BIT ISOLATED DURING THOSE QUIET WEEKEND HOURS BUILDING A SOCIAL CIRCLE TAKES TIME SO TRY NOT TO PUT TOO MUCH PRESSURE ON YOURSELF RIGHT AWAY WHILE YOU ARE STILL ADJUSTING TO THE CAMPUS ENVIRONMENT YOU MIGHT CONSIDER CHECKING OUT SOME OF THE STUDENT CLUBS CAMPUS EVENTS OR STUDY GROUPS THAT MATCH YOUR PERSONAL INTERESTS EVEN SMALL STEPS LIKE STRIKING UP A CONVERSATION WITH A CLASSMATE OR EXPLORING A LOCAL COFFEE SHOP CAN HELP THE AREA START TO FEEL MORE FAMILIAR HANG IN THERE BECAUSE FINDING YOUR COMMUNITY IS A JOURNEY THAT UNFOLDS GRADUALLY ONE DAY AT A TIME",
+        "top_candidates": [
+          {
+            "score": 40.986767089763994,
+            "a": 9,
+            "b": 8
+          },
+          {
+            "score": 1095.865768340145,
+            "a": 25,
+            "b": 10
+          },
+          {
+            "score": 1189.6715757531847,
+            "a": 19,
+            "b": 18
+          },
+          {
+            "score": 1219.8006271550557,
+            "a": 5,
+            "b": 22
+          },
+          {
+            "score": 1272.0072460211495,
+            "a": 11,
+            "b": 18
+          }
+        ],
+        "proof": [
+          "A=0 ... Z=25; C=(a*P+b) mod 26.",
+          "312 valid keys scored against English; E/T are candidate correspondences, not guaranteed frequency ranks.",
+          "Winning correspondence E->S, T->X.",
+          "4a+b=18; 19a+b=23 (mod 26).",
+          "15a=5 (mod 26); inverse(15)=7 because 15*7=4*26+1.",
+          "a=7*5 mod 26=9; b=18-4*9 mod 26=8.",
+          "26 = 2 * 9 + 8",
+          "9 = 1 * 8 + 1",
+          "8 = 8 * 1 + 0",
+          "inverse(a)=3; 9*3=1*26+1.",
+          "P=3*(C-8) mod 26."
+        ],
+        "frequencies": [
+          {
+            "letter": "A",
+            "cipher_count": 25,
+            "cipher_percent": 3.937007874015748,
+            "plain_percent": 8.503937007874017,
+            "english_percent": 8.167
+          },
+          {
+            "letter": "B",
+            "cipher_count": 13,
+            "cipher_percent": 2.047244094488189,
+            "plain_percent": 0.9448818897637795,
+            "english_percent": 1.492
+          },
+          {
+            "letter": "C",
+            "cipher_count": 47,
+            "cipher_percent": 7.4015748031496065,
+            "plain_percent": 3.937007874015748,
+            "english_percent": 2.782
+          },
+          {
+            "letter": "D",
+            "cipher_count": 32,
+            "cipher_percent": 5.039370078740157,
+            "plain_percent": 2.3622047244094486,
+            "english_percent": 4.253
+          },
+          {
+            "letter": "E",
+            "cipher_count": 50,
+            "cipher_percent": 7.874015748031496,
+            "plain_percent": 10.708661417322835,
+            "english_percent": 12.702
+          },
+          {
+            "letter": "F",
+            "cipher_count": 40,
+            "cipher_percent": 6.299212598425197,
+            "plain_percent": 2.047244094488189,
+            "english_percent": 2.228
+          },
+          {
+            "letter": "G",
+            "cipher_count": 29,
+            "cipher_percent": 4.566929133858268,
+            "plain_percent": 2.5196850393700787,
+            "english_percent": 2.015
+          },
+          {
+            "letter": "H",
+            "cipher_count": 1,
+            "cipher_percent": 0.15748031496062992,
+            "plain_percent": 3.622047244094488,
+            "english_percent": 6.094
+          },
+          {
+            "letter": "I",
+            "cipher_count": 54,
+            "cipher_percent": 8.503937007874017,
+            "plain_percent": 7.4015748031496065,
+            "english_percent": 6.966
+          },
+          {
+            "letter": "J",
+            "cipher_count": 15,
+            "cipher_percent": 2.3622047244094486,
+            "plain_percent": 0.47244094488188976,
+            "english_percent": 0.153
+          },
+          {
+            "letter": "K",
+            "cipher_count": 16,
+            "cipher_percent": 2.5196850393700787,
+            "plain_percent": 0.7874015748031497,
+            "english_percent": 0.772
+          },
+          {
+            "letter": "L",
+            "cipher_count": 3,
+            "cipher_percent": 0.47244094488188976,
+            "plain_percent": 5.039370078740157,
+            "english_percent": 4.025
+          },
+          {
+            "letter": "M",
+            "cipher_count": 20,
+            "cipher_percent": 3.1496062992125986,
+            "plain_percent": 3.1496062992125986,
+            "english_percent": 2.406
+          },
+          {
+            "letter": "N",
+            "cipher_count": 16,
+            "cipher_percent": 2.5196850393700787,
+            "plain_percent": 6.456692913385827,
+            "english_percent": 6.749
+          },
+          {
+            "letter": "O",
+            "cipher_count": 40,
+            "cipher_percent": 6.299212598425197,
+            "plain_percent": 7.874015748031496,
+            "english_percent": 7.507
+          },
+          {
+            "letter": "P",
+            "cipher_count": 6,
+            "cipher_percent": 0.9448818897637795,
+            "plain_percent": 2.5196850393700787,
+            "english_percent": 1.929
+          },
+          {
+            "letter": "Q",
+            "cipher_count": 18,
+            "cipher_percent": 2.8346456692913384,
+            "plain_percent": 0.15748031496062992,
+            "english_percent": 0.095
+          },
+          {
+            "letter": "R",
+            "cipher_count": 6,
+            "cipher_percent": 0.9448818897637795,
+            "plain_percent": 6.299212598425197,
+            "english_percent": 5.987
+          },
+          {
+            "letter": "S",
+            "cipher_count": 68,
+            "cipher_percent": 10.708661417322835,
+            "plain_percent": 6.299212598425197,
+            "english_percent": 6.327
+          },
+          {
+            "letter": "T",
+            "cipher_count": 23,
+            "cipher_percent": 3.622047244094488,
+            "plain_percent": 8.976377952755906,
+            "english_percent": 9.056
+          },
+          {
+            "letter": "U",
+            "cipher_count": 5,
+            "cipher_percent": 0.7874015748031497,
+            "plain_percent": 4.566929133858268,
+            "english_percent": 2.758
+          },
+          {
+            "letter": "V",
+            "cipher_count": 41,
+            "cipher_percent": 6.456692913385827,
+            "plain_percent": 0.9448818897637795,
+            "english_percent": 0.978
+          },
+          {
+            "letter": "W",
+            "cipher_count": 1,
+            "cipher_percent": 0.15748031496062992,
+            "plain_percent": 1.4173228346456692,
+            "english_percent": 2.36
+          },
+          {
+            "letter": "X",
+            "cipher_count": 57,
+            "cipher_percent": 8.976377952755906,
+            "plain_percent": 0.15748031496062992,
+            "english_percent": 0.15
+          },
+          {
+            "letter": "Y",
+            "cipher_count": 9,
+            "cipher_percent": 1.4173228346456692,
+            "plain_percent": 2.8346456692913384,
+            "english_percent": 1.974
+          },
+          {
+            "letter": "Z",
+            "cipher_count": 0,
+            "cipher_percent": 0.0,
+            "plain_percent": 0.0,
+            "english_percent": 0.074
+          }
+        ],
+        "note": "Language-fit ranking is not a probability; verify short or unusual text independently."
+      },
+      "decoded_username": "Rohaan",
+      "decoded_concern": "I moved to a new city for university and I have not made any friends yet, the weekends feel very empty.",
+      "request": {
+        "username_enc": "BAKNKCKRKRKE",
+        "mood": 4,
+        "message_enc": "SLAIKVKNTKKBKSAITSKNAIKRAIKEKBTTAIKJKLTSTLAIKKKNTAAITBKEKLTKKBTATJKLTSTLAIKRKEKSAISLAIKCKRTKKBAIKEKNTSAIKVKRKSKBAIKRKETLAIKKTAKLKBKEKSTJAITLKBTSAMAITSKCKBAITTKBKBKDKBKEKSTJAIKKKBKBKMAITKKBTATLAIKBKVTITSTLAE",
+        "api_key_enc": ""
+      },
+      "response": {
+        "ciphertext": "YSDAEMS XE XTS DIR FETIIV YTSFS YS IDYIQO INNFSACIXS I BFCSVJDQ BIAS LECVCVK EGF AFQNXEKFINTCA XSIM MEPCVK XE I RFIVJ VSY ACXQ BEF GVCPSFOCXQ CO I TGKS DCBS XFIVOCXCEV IVJ CX CO AEMNDSXSDQ VEFMID XE BSSD I RCX COEDIXSJ JGFCVK XTEOS WGCSX YSSUSVJ TEGFO RGCDJCVK I OEACID ACFADS XIUSO XCMS OE XFQ VEX XE NGX XEE MGAT NFSOOGFS EV QEGFOSDB FCKTX IYIQ YTCDS QEG IFS OXCDD IJLGOXCVK XE XTS AIMNGO SVPCFEVMSVX QEG MCKTX AEVOCJSF ATSAUCVK EGX OEMS EB XTS OXGJSVX ADGRO AIMNGO SPSVXO EF OXGJQ KFEGNO XTIX MIXAT QEGF NSFOEVID CVXSFSOXO SPSV OMIDD OXSNO DCUS OXFCUCVK GN I AEVPSFOIXCEV YCXT I ADIOOMIXS EF SHNDEFCVK I DEAID AEBBSS OTEN AIV TSDN XTS IFSI OXIFX XE BSSD MEFS BIMCDCIF TIVK CV XTSFS RSAIGOS BCVJCVK QEGF AEMMGVCXQ CO I LEGFVSQ XTIX GVBEDJO KFIJGIDDQ EVS JIQ IX I XCMS"
+      },
+      "checks": {
+        "key_matches": true,
+        "mood_matches": true,
+        "username_matches": true,
+        "concern_matches": true,
+        "reply_matches": true,
+        "reencryption_matches": true
+      },
+      "verified": true
+    },
+    {
+      "session": 3,
+      "case": {
+        "id": 3,
+        "username": "Rohaan",
+        "mood": 5,
+        "concern": "I am working part time and studying full time, and I feel tired all the time and fall behind on assignments."
+      },
+      "analysis": {
+        "a": 11,
+        "b": 10,
+        "a_inverse": 19,
+        "chi_squared": 61.401103163770024,
+        "runner_up_chi_squared": 936.1414746969266,
+        "letters": 709,
+        "plaintext": "WELCOME TO THE CRYPTOGRAPHY LAB ROHAAN WHERE WE CERTAINLY UNDERSTAND THE HEAVY LOAD OF BALANCING A PARTTIME JOB WITH FULLTIME STUDIES FEELING TIRED ALL THE TIME IS A VERY COMMON REACTION WHEN YOU ARE CONSTANTLY SPLITTING YOUR FOCUS BETWEEN TEXTBOOKS AND THE WORKPLACE IT IS COMPLETELY NATURAL TO OCCASIONALLY FALL BEHIND ON ASSIGNMENTS WHEN YOUR SCHEDULE IS STRETCHED TO ITS ABSOLUTE LIMITS LIKE YOURS IS RIGHT NOW PERHAPS YOU COULD TRY BREAKING YOUR LARGER PROJECTS DOWN INTO SMALLER MORE MANAGEABLE DAILY TASKS TO HELP BUILD SOME MOMENTUM REMEMBER TO ALSO CARVE OUT A FEW MOMENTS EACH DAY TO JUST STEP AWAY FROM YOUR WORK AND REST YOUR MIND YOU ARE MANAGING A LOT OF RESPONSIBILITIES AT ONCE SO TRY TO BE KIND TO YOURSELF AS YOU NAVIGATE THIS BUSY SEASON WE ARE ALWAYS HERE TO CHEER YOU ON AS YOU WORK THROUGH YOUR CURRENT ACADEMIC AND PROFESSIONAL GOALS",
+        "top_candidates": [
+          {
+            "score": 61.401103163770024,
+            "a": 11,
+            "b": 10
+          },
+          {
+            "score": 936.1414746969266,
+            "a": 3,
+            "b": 2
+          },
+          {
+            "score": 1093.6118139420762,
+            "a": 19,
+            "b": 24
+          },
+          {
+            "score": 1213.1981302668357,
+            "a": 1,
+            "b": 8
+          },
+          {
+            "score": 1346.486100468887,
+            "a": 25,
+            "b": 15
+          }
+        ],
+        "proof": [
+          "A=0 ... Z=25; C=(a*P+b) mod 26.",
+          "312 valid keys scored against English; E/T are candidate correspondences, not guaranteed frequency ranks.",
+          "Winning correspondence E->C, T->L.",
+          "4a+b=2; 19a+b=11 (mod 26).",
+          "15a=9 (mod 26); inverse(15)=7 because 15*7=4*26+1.",
+          "a=7*9 mod 26=11; b=2-4*11 mod 26=10.",
+          "26 = 2 * 11 + 4",
+          "11 = 2 * 4 + 3",
+          "4 = 1 * 3 + 1",
+          "3 = 3 * 1 + 0",
+          "inverse(a)=19; 11*19=8*26+1.",
+          "P=19*(C-10) mod 26."
+        ],
+        "frequencies": [
+          {
+            "letter": "A",
+            "cipher_count": 47,
+            "cipher_percent": 6.6290550070521865,
+            "plain_percent": 8.603667136812412,
+            "english_percent": 8.167
+          },
+          {
+            "letter": "B",
+            "cipher_count": 39,
+            "cipher_percent": 5.500705218617772,
+            "plain_percent": 1.9746121297602257,
+            "english_percent": 1.492
+          },
+          {
+            "letter": "C",
+            "cipher_count": 76,
+            "cipher_percent": 10.719322990126939,
+            "plain_percent": 3.244005641748942,
+            "english_percent": 2.782
+          },
+          {
+            "letter": "D",
+            "cipher_count": 1,
+            "cipher_percent": 0.14104372355430184,
+            "plain_percent": 2.6798307475317347,
+            "english_percent": 4.253
+          },
+          {
+            "letter": "E",
+            "cipher_count": 0,
+            "cipher_percent": 0.0,
+            "plain_percent": 10.719322990126939,
+            "english_percent": 12.702
+          },
+          {
+            "letter": "F",
+            "cipher_count": 3,
+            "cipher_percent": 0.4231311706629055,
+            "plain_percent": 1.4104372355430184,
+            "english_percent": 2.228
+          },
+          {
+            "letter": "G",
+            "cipher_count": 23,
+            "cipher_percent": 3.244005641748942,
+            "plain_percent": 1.9746121297602257,
+            "english_percent": 2.015
+          },
+          {
+            "letter": "H",
+            "cipher_count": 4,
+            "cipher_percent": 0.5641748942172073,
+            "plain_percent": 3.244005641748942,
+            "english_percent": 6.094
+          },
+          {
+            "letter": "I",
+            "cipher_count": 67,
+            "cipher_percent": 9.449929478138223,
+            "plain_percent": 5.6417489421720735,
+            "english_percent": 6.966
+          },
+          {
+            "letter": "J",
+            "cipher_count": 23,
+            "cipher_percent": 3.244005641748942,
+            "plain_percent": 0.4231311706629055,
+            "english_percent": 0.153
+          },
+          {
+            "letter": "K",
+            "cipher_count": 61,
+            "cipher_percent": 8.603667136812412,
+            "plain_percent": 1.1283497884344147,
+            "english_percent": 0.772
+          },
+          {
+            "letter": "L",
+            "cipher_count": 59,
+            "cipher_percent": 8.321579689703809,
+            "plain_percent": 5.500705218617772,
+            "english_percent": 4.025
+          },
+          {
+            "letter": "M",
+            "cipher_count": 24,
+            "cipher_percent": 3.385049365303244,
+            "plain_percent": 3.385049365303244,
+            "english_percent": 2.406
+          },
+          {
+            "letter": "N",
+            "cipher_count": 10,
+            "cipher_percent": 1.4104372355430184,
+            "plain_percent": 5.923836389280677,
+            "english_percent": 6.749
+          },
+          {
+            "letter": "O",
+            "cipher_count": 29,
+            "cipher_percent": 4.090267983074753,
+            "plain_percent": 9.449929478138223,
+            "english_percent": 7.507
+          },
+          {
+            "letter": "P",
+            "cipher_count": 48,
+            "cipher_percent": 6.770098730606488,
+            "plain_percent": 1.8335684062059239,
+            "english_percent": 1.929
+          },
+          {
+            "letter": "Q",
+            "cipher_count": 8,
+            "cipher_percent": 1.1283497884344147,
+            "plain_percent": 0.0,
+            "english_percent": 0.095
+          },
+          {
+            "letter": "R",
+            "cipher_count": 19,
+            "cipher_percent": 2.6798307475317347,
+            "plain_percent": 6.770098730606488,
+            "english_percent": 5.987
+          },
+          {
+            "letter": "S",
+            "cipher_count": 16,
+            "cipher_percent": 2.2566995768688294,
+            "plain_percent": 6.6290550070521865,
+            "english_percent": 6.327
+          },
+          {
+            "letter": "T",
+            "cipher_count": 13,
+            "cipher_percent": 1.8335684062059239,
+            "plain_percent": 8.321579689703809,
+            "english_percent": 9.056
+          },
+          {
+            "letter": "U",
+            "cipher_count": 40,
+            "cipher_percent": 5.6417489421720735,
+            "plain_percent": 4.090267983074753,
+            "english_percent": 2.758
+          },
+          {
+            "letter": "V",
+            "cipher_count": 14,
+            "cipher_percent": 1.9746121297602257,
+            "plain_percent": 0.5641748942172073,
+            "english_percent": 0.978
+          },
+          {
+            "letter": "W",
+            "cipher_count": 29,
+            "cipher_percent": 4.090267983074753,
+            "plain_percent": 2.2566995768688294,
+            "english_percent": 2.36
+          },
+          {
+            "letter": "X",
+            "cipher_count": 42,
+            "cipher_percent": 5.923836389280677,
+            "plain_percent": 0.14104372355430184,
+            "english_percent": 0.15
+          },
+          {
+            "letter": "Y",
+            "cipher_count": 14,
+            "cipher_percent": 1.9746121297602257,
+            "plain_percent": 4.090267983074753,
+            "english_percent": 1.974
+          },
+          {
+            "letter": "Z",
+            "cipher_count": 0,
+            "cipher_percent": 0.0,
+            "plain_percent": 0.0,
+            "english_percent": 0.074
+          }
+        ],
+        "note": "Language-fit ranking is not a probability; verify short or unusual text independently."
+      },
+      "decoded_username": "Rohaan",
+      "decoded_concern": "I am working part time and studying full time, and I feel tired all the time and fall behind on assignments.",
+      "request": {
+        "username_enc": "NGYTYUYVYVYI",
+        "mood": 5,
+        "message_enc": "CFGKYVYXGKJJYTJGYBYFYIYJGKJKYVJGJCGKJCYFYXYNGKYVYIYCGKJRJCJNYCJFYFYIYJGKYYJNYMYMGKJCYFYXYNGMGKYVYIYCGKCFGKYYYNYNYMGKJCYFJGYNYCGKYVYMYMGKJCYUYNGKJCYFYXYNGKYVYIYCGKYYYVYMYMGKYGYNYUYFYIYCGKYTYIGKYVJRJRYFYJYIYXYNYIJCJRGI",
+        "api_key_enc": ""
+      },
+      "response": {
+        "ciphertext": "SCBGIMC LI LJC GPOTLIYPKTJO BKV PIJKKX SJCPC SC GCPLKUXBO WXRCPALKXR LJC JCKHO BIKR IN VKBKXGUXY K TKPLLUMC FIV SULJ NWBBLUMC ALWRUCA NCCBUXY LUPCR KBB LJC LUMC UA K HCPO GIMMIX PCKGLUIX SJCX OIW KPC GIXALKXLBO ATBULLUXY OIWP NIGWA VCLSCCX LCDLVIIQA KXR LJC SIPQTBKGC UL UA GIMTBCLCBO XKLWPKB LI IGGKAUIXKBBO NKBB VCJUXR IX KAAUYXMCXLA SJCX OIWP AGJCRWBC UA ALPCLGJCR LI ULA KVAIBWLC BUMULA BUQC OIWPA UA PUYJL XIS TCPJKTA OIW GIWBR LPO VPCKQUXY OIWP BKPYCP TPIFCGLA RISX UXLI AMKBBCP MIPC MKXKYCKVBC RKUBO LKAQA LI JCBT VWUBR AIMC MIMCXLWM PCMCMVCP LI KBAI GKPHC IWL K NCS MIMCXLA CKGJ RKO LI FWAL ALCT KSKO NPIM OIWP SIPQ KXR PCAL OIWP MUXR OIW KPC MKXKYUXY K BIL IN PCATIXAUVUBULUCA KL IXGC AI LPO LI VC QUXR LI OIWPACBN KA OIW XKHUYKLC LJUA VWAO ACKAIX SC KPC KBSKOA JCPC LI GJCCP OIW IX KA OIW SIPQ LJPIWYJ OIWP GWPPCXL KGKRCMUG KXR TPINCAAUIXKB YIKBA"
+      },
+      "checks": {
+        "key_matches": true,
+        "mood_matches": true,
+        "username_matches": true,
+        "concern_matches": true,
+        "reply_matches": true,
+        "reencryption_matches": true
+      },
+      "verified": true
+    },
+    {
+      "session": 4,
+      "case": {
+        "id": 4,
+        "username": "Rohaan",
+        "mood": 6,
+        "concern": "I had a big argument with my older brother and now we are not talking, and it is bothering me every day."
+      },
+      "analysis": {
+        "a": 15,
+        "b": 12,
+        "a_inverse": 7,
+        "chi_squared": 46.67600194530126,
+        "runner_up_chi_squared": 909.3942302185918,
+        "letters": 696,
+        "plaintext": "IT SOUNDS LIKE YOU ARE CARRYING A HEAVY WEIGHT ON YOUR SHOULDERS LATELY ROHAAN ESPECIALLY SINCE ARGUMENTS WITH FAMILY MEMBERS CAN LINGER IN YOUR MIND AND DRAIN YOUR DAILY ENERGY WORKING THROUGH THESE COMPLEX RELATIONAL DYNAMICS IS TOUGH BUT IT IS COMPLETELY NORMAL TO FEEL UNSETTLED WHEN THINGS ARE UNRESOLVED WITH SOMEONE AS CLOSE AS A SIBLING EVEN THOUGH OUR LAB HERE IS STRICTLY FOCUSED ON CRYPTOGRAPHY AND CRACKING CODES RATHER THAN SOLVING INTERPERSONAL PUZZLES I CAN CERTAINLY UNDERSTAND WHY THIS ONGOING TENSION IS WEIGHING ON YOUR MOOD TODAY SOMETIMES TAKING A LITTLE SPACE TO PROCESS YOUR THOUGHTS OR FINDING A CALM MOMENT TO SEND A SIMPLE TEXT CAN HELP BRIDGE THE GAP WHEN YOU BOTH ARE READY BE GENTLE WITH YOURSELF AS YOU NAVIGATE THESE FEELINGS AND REMEMBER THAT IT TAKES TIME FOR BOTH SIDES TO COOL DOWN AFTER A DISAGREEMENT",
+        "top_candidates": [
+          {
+            "score": 46.67600194530126,
+            "a": 15,
+            "b": 12
+          },
+          {
+            "score": 909.3942302185918,
+            "a": 7,
+            "b": 24
+          },
+          {
+            "score": 1166.088549742689,
+            "a": 1,
+            "b": 7
+          },
+          {
+            "score": 1176.5050955064237,
+            "a": 1,
+            "b": 20
+          },
+          {
+            "score": 1290.1575103854007,
+            "a": 9,
+            "b": 1
+          }
+        ],
+        "proof": [
+          "A=0 ... Z=25; C=(a*P+b) mod 26.",
+          "312 valid keys scored against English; E/T are candidate correspondences, not guaranteed frequency ranks.",
+          "Winning correspondence E->U, T->L.",
+          "4a+b=20; 19a+b=11 (mod 26).",
+          "15a=17 (mod 26); inverse(15)=7 because 15*7=4*26+1.",
+          "a=7*17 mod 26=15; b=20-4*15 mod 26=12.",
+          "26 = 1 * 15 + 11",
+          "15 = 1 * 11 + 4",
+          "11 = 2 * 4 + 3",
+          "4 = 1 * 3 + 1",
+          "3 = 3 * 1 + 0",
+          "inverse(a)=7; 15*7=4*26+1.",
+          "P=7*(C-12) mod 26."
+        ],
+        "frequencies": [
+          {
+            "letter": "A",
+            "cipher_count": 23,
+            "cipher_percent": 3.3045977011494254,
+            "plain_percent": 7.471264367816092,
+            "english_percent": 8.167
+          },
+          {
+            "letter": "B",
+            "cipher_count": 9,
+            "cipher_percent": 1.293103448275862,
+            "plain_percent": 1.293103448275862,
+            "english_percent": 1.492
+          },
+          {
+            "letter": "C",
+            "cipher_count": 50,
+            "cipher_percent": 7.183908045977011,
+            "plain_percent": 3.0172413793103448,
+            "english_percent": 2.782
+          },
+          {
+            "letter": "D",
+            "cipher_count": 12,
+            "cipher_percent": 1.7241379310344827,
+            "plain_percent": 3.4482758620689653,
+            "english_percent": 4.253
+          },
+          {
+            "letter": "E",
+            "cipher_count": 10,
+            "cipher_percent": 1.4367816091954022,
+            "plain_percent": 11.494252873563218,
+            "english_percent": 12.702
+          },
+          {
+            "letter": "F",
+            "cipher_count": 24,
+            "cipher_percent": 3.4482758620689653,
+            "plain_percent": 1.1494252873563218,
+            "english_percent": 2.228
+          },
+          {
+            "letter": "G",
+            "cipher_count": 5,
+            "cipher_percent": 0.7183908045977011,
+            "plain_percent": 3.8793103448275863,
+            "english_percent": 2.015
+          },
+          {
+            "letter": "H",
+            "cipher_count": 44,
+            "cipher_percent": 6.32183908045977,
+            "plain_percent": 4.454022988505747,
+            "english_percent": 6.094
+          },
+          {
+            "letter": "I",
+            "cipher_count": 25,
+            "cipher_percent": 3.5919540229885056,
+            "plain_percent": 7.183908045977011,
+            "english_percent": 6.966
+          },
+          {
+            "letter": "J",
+            "cipher_count": 8,
+            "cipher_percent": 1.1494252873563218,
+            "plain_percent": 0.0,
+            "english_percent": 0.153
+          },
+          {
+            "letter": "K",
+            "cipher_count": 21,
+            "cipher_percent": 3.0172413793103448,
+            "plain_percent": 0.7183908045977011,
+            "english_percent": 0.772
+          },
+          {
+            "letter": "L",
+            "cipher_count": 55,
+            "cipher_percent": 7.902298850574713,
+            "plain_percent": 5.028735632183908,
+            "english_percent": 4.025
+          },
+          {
+            "letter": "M",
+            "cipher_count": 52,
+            "cipher_percent": 7.471264367816092,
+            "plain_percent": 3.0172413793103448,
+            "english_percent": 2.406
+          },
+          {
+            "letter": "N",
+            "cipher_count": 31,
+            "cipher_percent": 4.454022988505747,
+            "plain_percent": 7.758620689655173,
+            "english_percent": 6.749
+          },
+          {
+            "letter": "O",
+            "cipher_count": 54,
+            "cipher_percent": 7.758620689655173,
+            "plain_percent": 7.758620689655173,
+            "english_percent": 7.507
+          },
+          {
+            "letter": "P",
+            "cipher_count": 5,
+            "cipher_percent": 0.7183908045977011,
+            "plain_percent": 1.7241379310344827,
+            "english_percent": 1.929
+          },
+          {
+            "letter": "Q",
+            "cipher_count": 21,
+            "cipher_percent": 3.0172413793103448,
+            "plain_percent": 0.0,
+            "english_percent": 0.095
+          },
+          {
+            "letter": "R",
+            "cipher_count": 0,
+            "cipher_percent": 0.0,
+            "plain_percent": 6.32183908045977,
+            "english_percent": 5.987
+          },
+          {
+            "letter": "S",
+            "cipher_count": 0,
+            "cipher_percent": 0.0,
+            "plain_percent": 6.752873563218391,
+            "english_percent": 6.327
+          },
+          {
+            "letter": "T",
+            "cipher_count": 2,
+            "cipher_percent": 0.28735632183908044,
+            "plain_percent": 7.902298850574713,
+            "english_percent": 9.056
+          },
+          {
+            "letter": "U",
+            "cipher_count": 80,
+            "cipher_percent": 11.494252873563218,
+            "plain_percent": 3.3045977011494254,
+            "english_percent": 2.758
+          },
+          {
+            "letter": "V",
+            "cipher_count": 35,
+            "cipher_percent": 5.028735632183908,
+            "plain_percent": 0.7183908045977011,
+            "english_percent": 0.978
+          },
+          {
+            "letter": "W",
+            "cipher_count": 47,
+            "cipher_percent": 6.752873563218391,
+            "plain_percent": 1.4367816091954022,
+            "english_percent": 2.36
+          },
+          {
+            "letter": "X",
+            "cipher_count": 2,
+            "cipher_percent": 0.28735632183908044,
+            "plain_percent": 0.28735632183908044,
+            "english_percent": 0.15
+          },
+          {
+            "letter": "Y",
+            "cipher_count": 27,
+            "cipher_percent": 3.8793103448275863,
+            "plain_percent": 3.5919540229885056,
+            "english_percent": 1.974
+          },
+          {
+            "letter": "Z",
+            "cipher_count": 54,
+            "cipher_percent": 7.758620689655173,
+            "plain_percent": 0.28735632183908044,
+            "english_percent": 0.074
+          }
+        ],
+        "note": "Language-fit ranking is not a probability; verify short or unusual text independently."
+      },
+      "decoded_username": "Rohaan",
+      "decoded_concern": "I had a big argument with my older brother and now we are not talking, and it is bothering me every day.",
+      "request": {
+        "username_enc": "JQYDYCYBYBYO",
+        "mood": 6,
+        "message_enc": "URQMYCYBYUQMYBQMYQYRYNQMYBNQYNNJYZYJYONUQMNNYRNUYCQMYZNRQMYDYKYUYJNQQMYQNQYDNUYCYJNQQMYBYOYUQMYOYDNNQMNNYJQMYBNQYJQMYOYDNUQMNUYBYKYVYRYOYNQKQMYBYOYUQMYRNUQMYRNFQMYQYDNUYCYJNQYRYOYNQMYZYJQMYJNYYJNQNRQMYUYBNRQO",
+        "api_key_enc": ""
+      },
+      "response": {
+        "ciphertext": "CL WOAZFW VCGU IOA MHU QMHHICZY M NUMPI EUCYNL OZ IOAH WNOAVFUHW VMLUVI HONMMZ UWDUQCMVVI WCZQU MHYAKUZLW ECLN JMKCVI KUKBUHW QMZ VCZYUH CZ IOAH KCZF MZF FHMCZ IOAH FMCVI UZUHYI EOHGCZY LNHOAYN LNUWU QOKDVUT HUVMLCOZMV FIZMKCQW CW LOAYN BAL CL CW QOKDVULUVI ZOHKMV LO JUUV AZWULLVUF ENUZ LNCZYW MHU AZHUWOVPUF ECLN WOKUOZU MW QVOWU MW M WCBVCZY UPUZ LNOAYN OAH VMB NUHU CW WLHCQLVI JOQAWUF OZ QHIDLOYHMDNI MZF QHMQGCZY QOFUW HMLNUH LNMZ WOVPCZY CZLUHDUHWOZMV DAXXVUW C QMZ QUHLMCZVI AZFUHWLMZF ENI LNCW OZYOCZY LUZWCOZ CW EUCYNCZY OZ IOAH KOOF LOFMI WOKULCKUW LMGCZY M VCLLVU WDMQU LO DHOQUWW IOAH LNOAYNLW OH JCZFCZY M QMVK KOKUZL LO WUZF M WCKDVU LUTL QMZ NUVD BHCFYU LNU YMD ENUZ IOA BOLN MHU HUMFI BU YUZLVU ECLN IOAHWUVJ MW IOA ZMPCYMLU LNUWU JUUVCZYW MZF HUKUKBUH LNML CL LMGUW LCKU JOH BOLN WCFUW LO QOOV FOEZ MJLUH M FCWMYHUUKUZL"
+      },
+      "checks": {
+        "key_matches": true,
+        "mood_matches": true,
+        "username_matches": true,
+        "concern_matches": true,
+        "reply_matches": true,
+        "reencryption_matches": true
+      },
+      "verified": true
+    },
+    {
+      "session": 5,
+      "case": {
+        "id": 5,
+        "username": "Rohaan",
+        "mood": 7,
+        "concern": "My final year project deadline is close, my group members are not replying, and I feel like I have to do everything alone."
+      },
+      "analysis": {
+        "a": 15,
+        "b": 14,
+        "a_inverse": 7,
+        "chi_squared": 44.5286186586683,
+        "runner_up_chi_squared": 893.8705654205522,
+        "letters": 682,
+        "plaintext": "HEY ROHAAN IT SOUNDS LIKE YOU ARE CARRYING A REALLY HEAVY LOAD WITH YOUR FINAL YEAR PROJECT RIGHT NOW BUT A MOOD OF  SHOWS YOU STILL HAVE SOME GOOD ENERGY TO TACKLE THIS DEALING WITH UNRESPONSIVE GROUP MEMBERS IS FRUSTRATING ESPECIALLY WHEN THE DEADLINE IS CREEPING UP SO FAST TRY NOT TO LET THE SILENCE OF YOUR PEERS COMPLETELY DERAIL YOUR FOCUS AND REMEMBER THAT YOU CAN ALWAYS DOCUMENT THEIR LACK OF CONTRIBUTION FOR YOUR INSTRUCTORS TAKE A DEEP BREATH AND BREAK DOWN THE REMAINING TASKS INTO SMALLER MANAGEABLE STEPS SO YOU DO NOT FEEL LIKE YOU NEED TO FINISH EVERYTHING AT ONCE YOU HAVE ALREADY COME THIS FAR IN YOUR ACADEMIC JOURNEY AND YOU ARE FULLY CAPABLE OF CROSSING THE FINISH LINE IF THINGS GET TOO OVERWHELMING REACH OUT TO YOUR PROFESSOR OR LAB SUPERVISOR TO LET THEM KNOW THE SITUATION BEFORE THE FINAL CRUNCH HITS",
+        "top_candidates": [
+          {
+            "score": 44.5286186586683,
+            "a": 15,
+            "b": 14
+          },
+          {
+            "score": 893.8705654205522,
+            "a": 1,
+            "b": 22
+          },
+          {
+            "score": 995.6815488058671,
+            "a": 23,
+            "b": 22
+          },
+          {
+            "score": 1184.5828185468777,
+            "a": 1,
+            "b": 9
+          },
+          {
+            "score": 1250.066360712424,
+            "a": 7,
+            "b": 0
+          }
+        ],
+        "proof": [
+          "A=0 ... Z=25; C=(a*P+b) mod 26.",
+          "312 valid keys scored against English; E/T are candidate correspondences, not guaranteed frequency ranks.",
+          "Winning correspondence E->W, T->N.",
+          "4a+b=22; 19a+b=13 (mod 26).",
+          "15a=17 (mod 26); inverse(15)=7 because 15*7=4*26+1.",
+          "a=7*17 mod 26=15; b=22-4*15 mod 26=14.",
+          "26 = 1 * 15 + 11",
+          "15 = 1 * 11 + 4",
+          "11 = 2 * 4 + 3",
+          "4 = 1 * 3 + 1",
+          "3 = 3 * 1 + 0",
+          "inverse(a)=7; 15*7=4*26+1.",
+          "P=7*(C-14) mod 26."
+        ],
+        "frequencies": [
+          {
+            "letter": "A",
+            "cipher_count": 15,
+            "cipher_percent": 2.19941348973607,
+            "plain_percent": 7.478005865102639,
+            "english_percent": 8.167
+          },
+          {
+            "letter": "B",
+            "cipher_count": 44,
+            "cipher_percent": 6.451612903225806,
+            "plain_percent": 1.466275659824047,
+            "english_percent": 1.492
+          },
+          {
+            "letter": "C",
+            "cipher_count": 29,
+            "cipher_percent": 4.252199413489736,
+            "plain_percent": 3.225806451612903,
+            "english_percent": 2.782
+          },
+          {
+            "letter": "D",
+            "cipher_count": 10,
+            "cipher_percent": 1.466275659824047,
+            "plain_percent": 2.6392961876832843,
+            "english_percent": 4.253
+          },
+          {
+            "letter": "E",
+            "cipher_count": 45,
+            "cipher_percent": 6.5982404692082115,
+            "plain_percent": 11.583577712609971,
+            "english_percent": 12.702
+          },
+          {
+            "letter": "F",
+            "cipher_count": 13,
+            "cipher_percent": 1.906158357771261,
+            "plain_percent": 2.6392961876832843,
+            "english_percent": 2.228
+          },
+          {
+            "letter": "G",
+            "cipher_count": 9,
+            "cipher_percent": 1.3196480938416422,
+            "plain_percent": 2.19941348973607,
+            "english_percent": 2.015
+          },
+          {
+            "letter": "H",
+            "cipher_count": 18,
+            "cipher_percent": 2.6392961876832843,
+            "plain_percent": 4.39882697947214,
+            "english_percent": 6.094
+          },
+          {
+            "letter": "I",
+            "cipher_count": 8,
+            "cipher_percent": 1.1730205278592376,
+            "plain_percent": 6.5982404692082115,
+            "english_percent": 6.966
+          },
+          {
+            "letter": "J",
+            "cipher_count": 50,
+            "cipher_percent": 7.331378299120234,
+            "plain_percent": 0.2932551319648094,
+            "english_percent": 0.153
+          },
+          {
+            "letter": "K",
+            "cipher_count": 27,
+            "cipher_percent": 3.9589442815249267,
+            "plain_percent": 1.1730205278592376,
+            "english_percent": 0.772
+          },
+          {
+            "letter": "L",
+            "cipher_count": 18,
+            "cipher_percent": 2.6392961876832843,
+            "plain_percent": 4.838709677419355,
+            "english_percent": 4.025
+          },
+          {
+            "letter": "M",
+            "cipher_count": 15,
+            "cipher_percent": 2.19941348973607,
+            "plain_percent": 2.19941348973607,
+            "english_percent": 2.406
+          },
+          {
+            "letter": "N",
+            "cipher_count": 53,
+            "cipher_percent": 7.771260997067449,
+            "plain_percent": 6.451612903225806,
+            "english_percent": 6.749
+          },
+          {
+            "letter": "O",
+            "cipher_count": 51,
+            "cipher_percent": 7.478005865102639,
+            "plain_percent": 9.3841642228739,
+            "english_percent": 7.507
+          },
+          {
+            "letter": "P",
+            "cipher_count": 30,
+            "cipher_percent": 4.39882697947214,
+            "plain_percent": 1.906158357771261,
+            "english_percent": 1.929
+          },
+          {
+            "letter": "Q",
+            "cipher_count": 64,
+            "cipher_percent": 9.3841642228739,
+            "plain_percent": 0.0,
+            "english_percent": 0.095
+          },
+          {
+            "letter": "R",
+            "cipher_count": 7,
+            "cipher_percent": 1.0263929618768328,
+            "plain_percent": 7.331378299120234,
+            "english_percent": 5.987
+          },
+          {
+            "letter": "S",
+            "cipher_count": 22,
+            "cipher_percent": 3.225806451612903,
+            "plain_percent": 5.865102639296188,
+            "english_percent": 6.327
+          },
+          {
+            "letter": "T",
+            "cipher_count": 2,
+            "cipher_percent": 0.2932551319648094,
+            "plain_percent": 7.771260997067449,
+            "english_percent": 9.056
+          },
+          {
+            "letter": "U",
+            "cipher_count": 0,
+            "cipher_percent": 0.0,
+            "plain_percent": 4.252199413489736,
+            "english_percent": 2.758
+          },
+          {
+            "letter": "V",
+            "cipher_count": 0,
+            "cipher_percent": 0.0,
+            "plain_percent": 1.0263929618768328,
+            "english_percent": 0.978
+          },
+          {
+            "letter": "W",
+            "cipher_count": 79,
+            "cipher_percent": 11.583577712609971,
+            "plain_percent": 1.3196480938416422,
+            "english_percent": 2.36
+          },
+          {
+            "letter": "X",
+            "cipher_count": 33,
+            "cipher_percent": 4.838709677419355,
+            "plain_percent": 0.0,
+            "english_percent": 0.15
+          },
+          {
+            "letter": "Y",
+            "cipher_count": 40,
+            "cipher_percent": 5.865102639296188,
+            "plain_percent": 3.9589442815249267,
+            "english_percent": 1.974
+          },
+          {
+            "letter": "Z",
+            "cipher_count": 0,
+            "cipher_percent": 0.0,
+            "plain_percent": 0.0,
+            "english_percent": 0.074
+          }
+        ],
+        "note": "Language-fit ranking is not a probability; verify short or unusual text independently."
+      },
+      "decoded_username": "Rohaan",
+      "decoded_concern": "My final year project deadline is close, my group members are not replying, and I feel like I have to do everything alone.",
+      "request": {
+        "username_enc": "LSAFAEADADAQ",
+        "mood": 7,
+        "message_enc": "WBPTSOAAATAQADAMSOPTALADPSSOPOPSAFAIALAHPWSOAWALADAWAMATAQALSOATPHSOAHAMAFPHALSMSOABPTSOAPPSAFPLPOSOABALABASALPSPHSOADPSALSOAQAFPWSOPSALPOAMPTATAQAPSMSOADAQAWSOWTSOAAALALAMSOAMATAXALSOWTSOAEADPAALSOPWAFSOAWAFSOALPAALPSPTPWAEATAQAPSOADAMAFAQALSQ",
+        "api_key_enc": ""
+      },
+      "response": {
+        "ciphertext": "PWK JQPOOB EN YQCBHY XEIW KQC OJW SOJJKEBA O JWOXXK PWORK XQOH GENP KQCJ LEBOX KWOJ FJQTWSN JEAPN BQG DCN O MQQH QL  YPQGY KQC YNEXX PORW YQMW AQQH WBWJAK NQ NOSIXW NPEY HWOXEBA GENP CBJWYFQBYERW AJQCF MWMDWJY EY LJCYNJONEBA WYFWSEOXXK GPWB NPW HWOHXEBW EY SJWWFEBA CF YQ LOYN NJK BQN NQ XWN NPW YEXWBSW QL KQCJ FWWJY SQMFXWNWXK HWJOEX KQCJ LQSCY OBH JWMWMDWJ NPON KQC SOB OXGOKY HQSCMWBN NPWEJ XOSI QL SQBNJEDCNEQB LQJ KQCJ EBYNJCSNQJY NOIW O HWWF DJWONP OBH DJWOI HQGB NPW JWMOEBEBA NOYIY EBNQ YMOXXWJ MOBOAWODXW YNWFY YQ KQC HQ BQN LWWX XEIW KQC BWWH NQ LEBEYP WRWJKNPEBA ON QBSW KQC PORW OXJWOHK SQMW NPEY LOJ EB KQCJ OSOHWMES TQCJBWK OBH KQC OJW LCXXK SOFODXW QL SJQYYEBA NPW LEBEYP XEBW EL NPEBAY AWN NQQ QRWJGPWXMEBA JWOSP QCN NQ KQCJ FJQLWYYQJ QJ XOD YCFWJREYQJ NQ XWN NPWM IBQG NPW YENCONEQB DWLQJW NPW LEBOX SJCBSP PENY"
+      },
+      "checks": {
+        "key_matches": true,
+        "mood_matches": true,
+        "username_matches": true,
+        "concern_matches": true,
+        "reply_matches": true,
+        "reencryption_matches": true
+      },
+      "verified": true
+    }
+  ],
+  "all_passed": true,
+  "packet_capture": false
+}

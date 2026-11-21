@@ -1,0 +1,27 @@
+[
+  {
+    "username": "Rohaan",
+    "mood": 3,
+    "concern": "My final exams start next week and I cannot sleep because I keep thinking I will fail."
+  },
+  {
+    "username": "Rohaan",
+    "mood": 4,
+    "concern": "I moved to a new city for university and I have not made any friends yet, the weekends feel very empty."
+  },
+  {
+    "username": "Rohaan",
+    "mood": 5,
+    "concern": "I am working part time and studying full time, and I feel tired all the time and fall behind on assignments."
+  },
+  {
+    "username": "Rohaan",
+    "mood": 6,
+    "concern": "I had a big argument with my older brother and now we are not talking, and it is bothering me every day."
+  },
+  {
+    "username": "Rohaan",
+    "mood": 7,
+    "concern": "My final year project deadline is close, my group members are not replying, and I feel like I have to do everything alone."
+  }
+]

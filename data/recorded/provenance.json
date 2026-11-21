@@ -1,0 +1,26 @@
+{
+  "source_project": "PsycoSupport coursework; independent maintained implementation",
+  "reference": "https://github.com/maadilrehman/PsycoSupport",
+  "runs": [
+    {
+      "id": "submission",
+      "capture_sha256": "8ff2ccdc5ac1021f4776d068e400dc1a30b284e15ee6720e16d0647a485db9e3",
+      "sessions": 5,
+      "synthetic": true
+    },
+    {
+      "id": "tcp_baseline",
+      "capture_sha256": "2e2b4726500ab366c3178257c45a998a50cf3f329c80e65b182162f5f43ee9e1",
+      "sessions": 5,
+      "synthetic": true
+    },
+    {
+      "id": "web_validation",
+      "capture_sha256": "33d802a3e928a6614e983f2082f98ebba248c7a0024ba89851fbe8d427f9aad4",
+      "sessions": 5,
+      "synthetic": true
+    }
+  ],
+  "dates": "Original packet/log timestamps retained. Portfolio figures are generated from raw evidence and maintained source; historical report screenshots are not reused.",
+  "third_party_executable": "Supplied artifact retained under archive/coursework with separate attribution; not required by the maintained implementation."
+}

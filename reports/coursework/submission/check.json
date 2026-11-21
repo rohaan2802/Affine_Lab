@@ -1,0 +1,14 @@
+{
+  "zip": "A02_PsycoSupport_Submission.zip",
+  "files": 54,
+  "bytes": 16727157,
+  "sha256": "0d9d76c7299666822792162dbc7de203ebd7116f936f44cd301a76ffd89ebbb4",
+  "zip_integrity_passed": true,
+  "local_secret_excluded": true,
+  "real_desktop_screenshots": 5,
+  "verified_sessions": 5,
+  "ciphertext_fields": 15,
+  "historical_submission_record": true,
+  "zip_removed_after_submission_per_user": true,
+  "current_zip_present": false
+}

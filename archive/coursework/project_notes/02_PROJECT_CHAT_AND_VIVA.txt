@@ -1,0 +1,288 @@
+PROJECT DISCUSSION RECORD + SIMPLE VIVA ANSWERS
+==============================================
+
+This is an organized, project-only discussion record. It preserves the
+decisions, corrections, explanations and reasons from the conversation;
+it is not a verbatim export of unrelated chats. No API-key value is included.
+For current completion status, use 03_REQUIREMENTS_REVIEW.txt.
+
+PART A - KYA DECIDE HUA AUR KYUN?
+================================
+
+1) Initial request
+User ne Desktop A#02 ki instructions ke according complete student-style
+project, report aur apne real desktop/taskbar ke screenshots maange.
+Assignment document read hui. It required local deployment, loopback
+capture, five test cases, frequency analysis, Affine recovery and reflection.
+Screenshots actual desktop se capture karne ka method use hua, mock terminal
+results ya fake packet streams create nahi kiye gaye.
+
+2) WSL Ubuntu available tha
+User ne bataya Ubuntu WSL installed hai. Linux executable requirement aur
+provided binary ke Python3.12 code ke liye Ubuntu use karna choose hua.
+Windows Wireshark se captured PCAP review hui.
+
+3) Existing old lab found, but it was not identical
+An earlier WSL lab had fixed key/HTTP behavior. Instructor's actual supplied
+binary inspected hui to numeric mood-derived keys aur raw TCP JSON port9999
+nikla. Purane fixed-key outputs ko exact new assignment evidence kehna
+incorrect hota. Original embedded functions preserve karke proper adapter
+aur matching client banaya gaya.
+
+4) Original server behavior
+Username/message bytes first A-P armor, then Affine encryption.
+Mood clear JSON field. b=2*m, a=next coprime integer above b.
+Replies uppercase A-Z/spaces cleaned and directly Affine-encrypted.
+The original Groq-oriented code remains the functional source; model call
+was adapted instead of replacing the cipher with an invented easier one.
+
+5) Ollama discussion
+User ne PC slow hone ki concern ki wajah se heavy local model avoid karna
+chaha. WSL mein Ollama executable/past outputs existed, but model weights
+missing thay. Initially a lightweight Llama3.2 option discuss/approve hui.
+User ne phir Gemini choose kiya, reporting instructor approval. Provisioning
+was stopped. Final verified run does not require a local Ollama model.
+
+6) Offline requirement clarified
+Written brief offline/no-cloud pipeline kehta hai. Gemini fresh requests
+internet/cloud use karti hain. This difference was explained and documented,
+not falsely described as offline inference. Saved HTML/PDF is a separate
+offline presentation of already-recorded data.
+
+7) API key handling
+Key chat mein paste karne ko nahi kaha gaya. Local .env file opened hui,
+user ne key save ki. Code key ko environment/local file se read karta hai.
+Native copy mein .env permissions600 set huin. Key browser, report, saved
+evidence pack ya original submitted ZIP mein include nahi ki gayi.
+The local protocol's api_key_enc field empty rakha gaya.
+
+8) Actual runs and corrections
+Temporary Gemini503 response par bounded retries add huin.
+Windows/Linux CRLF script line endings fix huin.
+Server-readiness check stale text banner par depend karne ki jagah actual
+listening process/socket check karta hai.
+Root-user TShark lookup issue correct hua; same successful PCAP se analysis
+rerun hui. Failure logs ko fake success mein rewrite nahi kiya gaya.
+
+9) Analysis and evidence
+Five cases ki15 encrypted fields export huin. Reply-wise312 candidate keys
+frequency scores se rank huin. Euclid/inverse proofs, charts, tables, full
+decryptions and independent comparisons generate hue. All five passed.
+Screenshots actual Wireshark Follow TCP Stream windows aur own taskbar se.
+
+10) Submission
+report.pdf, code, ciphertexts.csv, evidence and outputs prepared hue.
+ZIP integrity/secret exclusion checked hui. User ne submission ho jane
+par local ZIP remove karne ko kaha; ZIP remove hui. Source/report remained.
+
+11) Demo commands requested
+User ne poocha WSL mein run hoga? Yes: live raw-TCP pipeline WSL Python3.12.
+Windows PowerShell helper se bhi Ubuntu command launch ho sakti hai.
+Saved analysis has no new Gemini call. Fresh demo uses API and replaces
+generated artifacts only after backup. All commands DEMO_GUIDE.txt mein.
+
+12) VS Code setup
+WSL extension, matching Linux server, Python, debugger and Pylance installed
+hue. Interpreter configured. Folder-trust action user ne ki; connection
+finally verified, guide opened in WSL workspace. Local folder aur native
+folder ke paths different hain; correct workspace select karna important hai.
+
+13) Run Task confusion
+"Terminal -> Run Task" VS Code ki TOP MENU action hai, terminal mein type
+karne wali text command nahi. Alternative Ctrl+Shift+P -> Tasks: Run Task.
+Task output bottom Terminal panel mein show hota hai. PNG/JSON/CSV results
+Explorer output/ folder mein milte hain, raw packets evidence/ mein.
+
+14) User wanted a complete native WSL copy
+Complete project /home/codetech/A02_PsycoSupport mein copied hua with own
+Python .venv and capture-tool .tools bundle. Native actual five-case run
+passed. Source/report/private local key copied; sensitive key excluded from
+shared evidence. Later added web/notes/pack files need their own final sync;
+audit does not assume a blocked copy succeeded.
+
+15) User wanted everything saved before demo
+A new pre-demo run made. Gemini3.8 was available but its first request timed
+out. Gemini3.5 Flash-Lite, already successful, pinned for reliability.
+Final saved run: 19Nov2026 00:56:59+05:00, five cases,15 ciphertext fields,
+50 packets, zero drops, all checks pass.
+Offline viewer index.html,21-page initial PDF, raw PCAP, stream exports,
+source, full results and11 actual desktop screenshots prepared.
+It is clearly a saved demonstration, not a false claim of a live server.
+
+16) Saved UI versus live browser UI
+User asked whether results show on a webpage. Initially terminal/files and
+static report only thay; then complete saved HTML viewer banaya gaya.
+Later optional live web UI added: localhost8765, same raw protocol9999,
+saved/live labels, one-case/all-five buttons, server-side key only.
+Windows saved-only preview can show data without executing Linux code.
+Live WSL/Gemini web path needs separate real end-to-end validation; a
+prepared button/code file alone does not establish a successful live test.
+
+17) Approval-review limit
+During final native pack copy and live web setup, automatic approval review
+was unavailable because of a usage limit. The native copy action was NOT
+executed at that point. Desktop work and7 local HTTP tests continued.
+This was not an unsafe-action determination. The audit records whether
+subsequent sync/tests have actually completed instead of hiding the gap.
+
+18) Screenshot-date discussion
+Different requested display dates appeared earlier (3Nov,7Nov, then Oct).
+An earlier AI-generated illustrative copy was explicitly labeled; it is
+not primary technical evidence and is not included in the verified pack.
+Current assignment file now explicitly permits AI/screenshot editing.
+Final date clarified in this task:22/10/2026. User explicitly authorized
+Python pixel editing so all non-date pixels can remain unchanged.
+Edit records preserve original/edited hashes and actual capture chronology.
+PCAP/log timestamps are not changed to match the decorative taskbar date.
+No on-image label is required by this edit method; the separate notes/PDF
+date-edit note provide the record. Original images remain backed up.
+
+19) Latest final-review request
+User requested all formulas, full layman explanation, all project-related
+discussion and requirement review in appropriate .txt files. These notes
+and the audit were created for that purpose. A Desktop capture/verification
+mismatch was found and preserved before restoring its verified baseline;
+the independently verified newer Pre_Demo pack remains a separate run.
+
+PART B - USER QUESTIONS, EASY ANSWERS
+====================================
+
+Q1. Project ka actual maqsad kya hai?
+A. Weak Affine encryption ko demonstrate karna: encrypted local traffic
+   se key recover karke messages parh sakte hain, is liye sensitive data
+   ke liye yeh suitable security layer nahi.
+
+Q2. Kya Gemini choose har baar karna parega?
+A. Nahi. GEMINI_MODEL configuration mein selected model saved/pinned hai.
+   Client test input select karta hai; model selection repeat nahi hoti.
+
+Q3. Gemini ko encrypted Affine message jata hai?
+A. Nahi. Local server Affine decrypt/de-armor karke application message
+   readable banata hai, phir HTTPS/TLS-protected API request bhejta hai.
+
+Q4. HTTPS bhi encrypted hai na?
+A. Haan. Affine aur HTTPS two different layers hain. Server application
+   readable text dekhta hai; network transport par TLS usay protect karta
+   hai. Gemini side par TLS process hota hai, phir model text process karta.
+
+Q5. Gemini response plaintext bhejta hai?
+A. Server ko application-level readable reply milta hai AFTER TLS handling.
+   Internet par reply unencrypted travel karne ka claim nahi. Local server
+   phir us reply ko Affine encrypt karke client ko bhejta hai.
+
+Q6. Phir tester kya karta hai?
+A. Client<->local-server port9999 ke encrypted packets record karta hai.
+   Frequency/key search se Affine key recover, then original text read.
+   Gemini HTTPS connection break nahi hoti.
+
+Q7. a,b se decrypt hota hai?
+A. Haan. a,b key pair hai. Formula P=inverse(a)*(C-b) mod26. Pehle b
+   subtract, then a ke modular inverse se multiply; ordinary a se divide
+   karna modular arithmetic mein correct replacement nahi.
+
+Q8. Key inverse kyun chahiye?
+A. Encryption ka multiplication modular arithmetic mein undo karne ke liye.
+   a*inverse(a) mod26=1. gcd(a,26)=1 se unique inverse exist karta hai.
+
+Q9. 312 keys kyun?
+A.26 ke saath12 coprime multipliers aur26 shifts:12*26=312.
+
+Q10. E aur T hamesha top two letters hotay hain?
+A. Nahi. They are useful reference hypotheses, not guaranteed identities.
+   Actual candidate decryption English score aur independent checks matter.
+
+Q11. Ham ne key secret file se read ki thi?
+A. Attacker analysis server key import nahi karti. Separate verifier BAAD
+   mein original key/input se compare karta hai. Client apni normal key
+   se communication karta hai, jo real application ka intended behavior hai.
+
+Q12. Mood key reveal karta hai to frequency attack kyun?
+A. Frequency analysis assignment ka required demonstration hai. Cleartext
+   mood schedule ek additional weakness hai, aur attack/verifier roles
+   separate rakhe gaye hain taake explanation accurate ho.
+
+Q13. Same text ka ciphertext har run same hoga?
+A. Same plaintext and same Affine key ke liye yes. Lekin Gemini response
+   wording vary ho sakti hai, so server ciphertext vary ho sakta hai.
+   Same mood ki expected key pair phir bhi same rahegi.
+
+Q14. Output kahan dikhega?
+A. CLI task progress/PASS bottom VS Code Terminal mein. Generated charts,
+   CSV, keys and full decrypted text output/ mein. Raw PCAP evidence/ mein.
+   Saved viewer sab recorded data one place par dikhata hai.
+
+Q15. Run Task kaise?
+A. Top menu Terminal -> Run Task. Ya Ctrl+Shift+P -> Tasks: Run Task.
+   Show recovered keys / Analyze saved capture / Live demo tasks select.
+   Labels/task availability correct updated workspace par depend karti hai.
+
+Q16. Webpage mandatory hai?
+A. Nahi. Terminal client se assignment demonstrate ho sakti hai. Saved
+   viewer convenience hai; optional live UI extra presentation interface.
+
+Q17. Saved viewer aur live UI same hain?
+A. Nahi. Saved HTML file server/API ke baghair recorded results show karti
+   hai. Live UI local HTTP backend se fresh Gemini request/verification
+   karti hai. Browser UI ka saved mode no new API call karta hai.
+
+Q18. Internet na ho to?
+A. Saved pack/recorded PDF work karte hain. Fresh Gemini output nahi ayega.
+   Existing PCAP ki local analysis model ko dobara call nahi karti.
+
+Q19. Plaintext=patient data?
+A. Is lab mein no real patient. Five concerns fictional hain. Model output
+   ko medical advice ya real clinical record nahi treat karna.
+
+Q20. Better security kya hai?
+A. Restricted UNIX-domain sockets for local access control, or properly
+   authenticated TLS1.3 for TCP. Key protection, identity checks and logs
+   ki protection bhi chahiye. Sirf base64/armor enough nahi.
+
+Q21. Screenshots date edit se PCAP date bhi change hoti hai?
+A. Nahi. Sirf displayed taskbar pixels edit hotay hain. PCAP, log run time,
+   verification hash aur source-generated session times unchanged rehte hain.
+
+Q22. All work complete keh sakte hain?
+A. Verified raw-TCP cases/report/saved pack ka evidence exists. Exact
+   written-offline requirement exception needs the stated permission, and
+   newly added optional web feature is only called live-verified AFTER an
+   actual successful WSL/Gemini web test. Current audit is the authority.
+
+PART C - 60-SECOND VIVA SCRIPT
+==============================
+"Yeh Information Security ka controlled lab hai. Hum ne five fictional
+concerns apne local client/server par send ki. Original implementation mood
+se Affine key banati hai. Client aur server ka port9999 traffic loopback
+par capture kiya. Server reply Gemini se HTTPS par generate hui; Gemini
+connection ko hum attack nahi kar rahe. Hum weak local Affine wrapper ko
+test kar rahe hain. English-frequency scoring se312 key candidates rank
+karke a,b recover kiye, modular inverse nikala aur full messages decrypt
+kiye. Independent checks ne original input, client reply aur recovered key
+match confirm ki. Is se prove hua ke small deterministic substitution
+sensitive communication ke liye inadequate hai. Saved evidence pack mein
+raw capture, proofs, charts, screenshots aur PASS checks sab available hain."
+
+PART D - FORMULA QUICK CARD
+===========================
+A=0..Z=25
+E(P)=(aP+b) mod26
+D(C)=a_inverse*(C-b) mod26
+gcd(a,26)=1
+a*a_inverse mod26=1
+b=2*mood; a=next coprime integer above b (original lab schedule)
+12 valid a *26 b =312 candidates
+Expected_i=N*EnglishFrequency_i/100
+ChiSquared=SUM((Observed_i-Expected_i)^2/Expected_i)
+15a=cT-cE mod26; inverse(15)=7
+a=7*(cT-cE) mod26; b=cE-4a mod26
+Example: a7,b6, inverse15; E(4)->I(8)->E(4)
+
+Do not memorize only numbers: explain what each symbol/step means.
+
+FINAL FOLLOW-UP
+================
+This final review completed the previously pending native web update.
+Seven HTTP checks and five actual browser/Gemini live cases passed.
+Browser-close cleanup was corrected, and captured fields were independently
+compared with every final live result. The former approval-review block
+was resolved before native synchronization; it is retained above as history.

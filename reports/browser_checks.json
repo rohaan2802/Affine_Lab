@@ -1,0 +1,59 @@
+{
+  "static_layouts": [
+    {
+      "viewport": 1440,
+      "theme": "light",
+      "columns": 3,
+      "passed": true
+    },
+    {
+      "viewport": 1440,
+      "theme": "dark",
+      "columns": 3,
+      "passed": true
+    },
+    {
+      "viewport": 820,
+      "theme": "light",
+      "columns": 2,
+      "passed": true
+    },
+    {
+      "viewport": 820,
+      "theme": "dark",
+      "columns": 2,
+      "passed": true
+    },
+    {
+      "viewport": 390,
+      "theme": "light",
+      "columns": 1,
+      "passed": true
+    },
+    {
+      "viewport": 390,
+      "theme": "dark",
+      "columns": 1,
+      "passed": true
+    },
+    {
+      "viewport": 320,
+      "theme": "light",
+      "columns": 1,
+      "passed": true
+    },
+    {
+      "viewport": 320,
+      "theme": "dark",
+      "columns": 1,
+      "passed": true
+    }
+  ],
+  "dashboard_layouts": 8,
+  "arithmetic_keys": 312,
+  "candidate_score_parity": true,
+  "gallery_controls": true,
+  "file_uri": true,
+  "dashboard_tcp_run": true,
+  "javascript_errors": []
+}

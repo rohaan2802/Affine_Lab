@@ -1,0 +1,124 @@
+AFFINE LAB — COMPLETE PROJECT WALKTHROUGH
+
+1. THE ORIGINAL TASK
+The coursework demonstrated a deliberately weak encryption wrapper around a
+local conversation service. It asked for five synthetic cases, loopback packet
+evidence, letter-frequency analysis, mathematical key recovery, decrypted text
+and a security reflection. Authored source/reports are included in the public coursework folders.
+Supplied instructions and project discussion records are retained in archive/coursework. Actual API keys remain excluded. This recruiter portfolio is a maintained extension.
+
+2. WHAT WAS CHANGED AND WHY
+Overlapping coursework copies were compared by SHA-256. Three different captured
+runs were retained as raw evidence. Exact source-mirror copies and bytecode were
+removed from the archive; meaningful variants remain. Private credentials and
+the supplied third-party binary were kept outside public source.
+
+A new independent Python package replaces the binary loader. It preserves the
+recorded wire protocol while exposing readable cipher, parser, analyzer, server,
+provider, runner and reporting modules. Runtime third-party dependencies are zero.
+The short folder/repository name Affine_Lab describes the actual subject.
+
+3. INPUTS
+The five packaged cases use the name Rohaan and moods 3, 4, 5, 6 and 7. Their
+invented concerns cover examinations, moving city, part-time work, a sibling
+argument and a group deadline. They are demonstrations rather than patient data.
+The runtime fixture stores exact baseline English replies for offline replay.
+The historical evidence stores actual PCAP bytes plus original captured JSON.
+
+4. CLIENT TO SERVER
+The username and concern are converted to UTF-8 bytes. Each byte is split into
+two 4-bit nibbles; values 0–15 become A–P letters. Example: A is byte 0x41,
+so its armor is EB. The armor is substituted with the Affine key.
+JSON contains username_enc, mood, message_enc and an empty api_key_enc field.
+The Python client sends it over real TCP to 127.0.0.1. The default local dashboard
+uses port 9999 for TCP and 8765 for HTTP; the CLI can select free TCP ports.
+
+5. THE KEY
+A=0 through Z=25. Let P be a plaintext letter number and C its ciphertext.
+C = (a*P+b) mod 26. Here a multiplies and b shifts the alphabet.
+Only a values coprime to 26 work. They are:
+1,3,5,7,9,11,15,17,19,21,23,25. There are 12*26=312 valid keys.
+The recorded mood schedule sets b=2*mood and chooses the next coprime a above b.
+Moods 3–7 yield (7,6),(9,8),(11,10),(15,12),(15,14).
+The analyzer never uses this schedule when choosing its key.
+
+6. SERVER AND PROVIDER
+The server reverses substitution and armor. In replay mode it retrieves the exact
+saved reply matching a known synthetic case; there is no inference or API call.
+In Gemini mode it sends the synthetic request to Google's HTTPS endpoint and
+receives newly generated English. The credential stays server-side and travels
+in an HTTPS header. An API error is an error, with no hidden replay fallback.
+Provider selection happens once when starting the server, not on each message.
+
+Gemini is used to produce realistic variable English text for cipher analysis.
+It does not recover keys or decrypt traffic. The project does not require a
+Gemini browser chat. WSL is optional for the maintained package; Linux is needed
+only for the optional tcpdump capture command. No Ollama model is installed.
+
+7. SERVER TO CLIENT
+The reply is normalized to uppercase ASCII letters/spaces, Affine-encrypted,
+wrapped in a ciphertext JSON field and returned over the local TCP connection.
+The client already knows its key and can decrypt it normally.
+The separate analyzer tries to recover that same key without being told it.
+
+8. WHAT THE ANALYZER DOES
+It counts the ciphertext's 26 letters once. For each valid key, it maps those
+counts back to a candidate plaintext alphabet and calculates:
+chi-square = sum((observed-expected)^2/expected), over A–Z.
+expected = total letters * fixed English frequency / 100.
+The smallest score wins, and the analyzer decrypts that candidate.
+This costs O(N+312*26), rather than decrypting the N-letter message 312 times.
+Tests compare every optimized score with the full-message reference.
+
+9. INVERSE AND WORKED PROOF
+P = inverse(a)*(C-b) mod 26.
+For a=7, inverse=15, since 7*15=105=4*26+1.
+Euclid: 26=3*7+5; 7=1*5+2; 5=2*2+1.
+Back-substitution: 1=3*26-11*7, so inverse(7)=-11 mod26=15.
+For the winning (7,6) candidate: E=4 maps to I=8, T=19 maps to J=9.
+4a+b=8; 19a+b=9; subtract to get 15a=1 (mod26).
+inverse(15)=7, giving a=7 and b=8-4*7 mod26=6.
+These correspondences explain the candidate. They do not claim the top two
+observed letters are always E and T. Short texts can mislead the ranking.
+
+10. HOW CORRECTNESS IS CHECKED
+After recovery, the verifier compares the key with the known mood schedule,
+decodes the original username and concern, compares the reply with the client's
+own decryption, and re-encrypts the recovered text. For historical runs it also
+reassembles raw TCP payloads from PCAP and compares them with stored JSON, then
+checks the capture's SHA-256 digest. Re-encryption alone cannot identify a key.
+
+11. SAVED OUTPUTS
+reports/evidence_verification.json: all 15 historical sessions and benchmark.
+reports/replay_demo/: a newly executed five-case TCP replay, using saved replies.
+reports/fresh_gemini/: a separate five-case fresh HTTPS/API generation check.
+Each run export includes result.json, summary.csv, ciphertexts.csv,
+key_recovery_proof.txt, decrypted_sessions.txt and a SHA-256 manifest.
+New personal demo runs go into ignored runs/<timestamp>/ directories.
+The terminal prints where results are saved. The browser dashboard has download
+links. The 24 public figures are generated from actual data/reports/source.
+
+12. RESULTS AND LIMITS
+All 15 historical sessions matched key, inputs, reply and packet/hash checks.
+The new five-case replay and five-case Gemini runs also passed. Exact times and
+model names are in the result JSON files. This does not guarantee all future
+API replies or arbitrary ciphertexts recover correctly. Scores are not probabilities.
+The PCAP inspector is intentionally limited to the lab's classic IPv4/TCP data.
+Synthetic replies are not clinical advice. Affine must not protect real secrets.
+
+13. HTTPS QUESTION
+Yes, HTTPS is encrypted too. It protects the server-to-Gemini connection with TLS.
+The weak Affine wrapper protects a different path: local client-to-server TCP.
+The lab breaks the latter. Capturing the lab TCP port does not decrypt TLS.
+
+14. REAL SECURITY ALTERNATIVES
+For a real local service, use controlled Linux pathname UNIX-domain sockets
+and appropriate user/group permissions, or authenticated TLS with certificate
+validation and access control. Neither protects a fully compromised privileged
+host by itself. See SECURITY_REFLECTION.md for scope and primary references.
+
+15. DEMO ORDER
+Read DEMO_GUIDE.txt for copyable Windows/WSL commands. Show a capture verification,
+then a replay, then the local dashboard proofs/downloads. The static index.html
+explains the project without requiring a model. Use the source/tests when asked
+how the result was verified. Keep recorded and fresh results clearly labelled.

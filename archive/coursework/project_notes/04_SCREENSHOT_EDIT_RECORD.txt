@@ -1,0 +1,379 @@
+SCREENSHOT DISPLAY-DATE EDIT RECORD
+===================================
+
+Current assignment ethics item5 explicitly permits AI and screenshot editing.
+User explicitly authorized Python pixel editing and confirmed 22/10/2026.
+Only the bottom-right taskbar date field was edited in 17 active screenshots.
+The desktop font substitution is Kristen ITC; the matching installed font
+was used. No on-image label was added. Image dimensions remain 1366x768.
+
+All pixels outside the recorded date rectangle were checked unchanged.
+Clock time, packets, ciphertext, charts, browser content and all other
+UI pixels were preserved. Raw PCAP bytes and actual log timestamps were
+not edited. A displayed date is not a real capture timestamp.
+
+Original submission screenshots were captured on 18 November 2026.
+Newer pre-demo screenshots were captured on 19 November 2026.
+Their edited taskbar display reads 22 October 2026.
+Original PNGs and reports remain backed up outside the active project.
+
+Per-file original/edited hashes and pixel checks:
+[
+  {
+    "file": "psycare_lab/evidence/desktop_capture_overview.png",
+    "actual_capture_date": "2026-11-18",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "e710508a79db98edb2b65c814c1cca9e9df059b00fc75c7a072ebd5a469d75d7",
+    "edited_sha256": "d710155bafbc2fa6870dc77ce651f4ab25958b45a575ca79067e2fba18a1d778",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\psycare_lab\\evidence\\desktop_capture_overview.png"
+  },
+  {
+    "file": "psycare_lab/evidence/desktop_session_1.png",
+    "actual_capture_date": "2026-11-18",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "3960d14c1b77ddbfd8d32a6583b0a74a336748a3a49b2fdad6b30b13024c53fe",
+    "edited_sha256": "0abcf6369374fb26389b6a50c2fc64a603f51ed400adec32664b859532edcbf3",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\psycare_lab\\evidence\\desktop_session_1.png"
+  },
+  {
+    "file": "psycare_lab/evidence/desktop_session_2.png",
+    "actual_capture_date": "2026-11-18",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "e3c45e9365b800dd8b458efdb66c027491a111665040d0141de624e4808dc8c5",
+    "edited_sha256": "af01cb0a87a5f12e86b7d471033b434db018cfd8e2989a86e7bae1aaff869687",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\psycare_lab\\evidence\\desktop_session_2.png"
+  },
+  {
+    "file": "psycare_lab/evidence/desktop_session_3.png",
+    "actual_capture_date": "2026-11-18",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "d5f882fe044f75b458b492782ff130826cae324f8b7df084fd7a92f556743180",
+    "edited_sha256": "6a3edf556495023d87991a6cf3be4a7fbd517b8cb0521a372ad48f7957307cf4",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\psycare_lab\\evidence\\desktop_session_3.png"
+  },
+  {
+    "file": "psycare_lab/evidence/desktop_session_4.png",
+    "actual_capture_date": "2026-11-18",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "39c25590aa6fb265a3ac5951f458bd3271b4c5c984691336f8f908676a9d220c",
+    "edited_sha256": "8d7f6d8eae5c201c29034b64d06fc643bcc1879ddbc9978ea7ae382483dc9a40",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\psycare_lab\\evidence\\desktop_session_4.png"
+  },
+  {
+    "file": "psycare_lab/evidence/desktop_session_5.png",
+    "actual_capture_date": "2026-11-18",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "189aa40ba53fa864aa58f8605e88d0911ed83c3cd3d35f72f65f1065a313036f",
+    "edited_sha256": "1bedcc6e21ac890352b918666d49959eec09b8703e5c3963987abad60d45995d",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\psycare_lab\\evidence\\desktop_session_5.png"
+  },
+  {
+    "file": "Pre_Demo/screenshots/01_capture_overview.png",
+    "actual_capture_date": "2026-11-19",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "7afa527e30bdf7af85c02fc910ffafd1aa265fb2457ad2ff3d12dbba5620f5de",
+    "edited_sha256": "14f136adcc225b9e8df2d87b7baa0b36ef335b8259169cded0453f8ef347c202",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\Pre_Demo\\screenshots\\01_capture_overview.png"
+  },
+  {
+    "file": "Pre_Demo/screenshots/02_wireshark_session_1.png",
+    "actual_capture_date": "2026-11-19",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "0e566e025a82c63bfb6ac9724bf08773f907fd85b2d2705379c299ef9ed49cf1",
+    "edited_sha256": "f3556c73de2ac2a00ddc203f6b72ba8bfb4caaab548bc2b6d1fb212dab99c985",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\Pre_Demo\\screenshots\\02_wireshark_session_1.png"
+  },
+  {
+    "file": "Pre_Demo/screenshots/03_wireshark_session_2.png",
+    "actual_capture_date": "2026-11-19",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "87166aa6b16426337cf779592fc9cc48842e53bffbf29abf17df0789f5ab2e0a",
+    "edited_sha256": "c94ee1f9e8f85b32a091d38ab31d8a4d5c275debee4993d38ea3e6ddc3dd0fd3",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\Pre_Demo\\screenshots\\03_wireshark_session_2.png"
+  },
+  {
+    "file": "Pre_Demo/screenshots/04_wireshark_session_3.png",
+    "actual_capture_date": "2026-11-19",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "37117a21f7d7f1912b3ee090520f5230c6fd5cca8b6b1bfad5174019130acbf1",
+    "edited_sha256": "8d91ba5cee5129aea9bdc6b5588eafd5ffe53a6fd7ec841248e4bbc30ac671b9",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\Pre_Demo\\screenshots\\04_wireshark_session_3.png"
+  },
+  {
+    "file": "Pre_Demo/screenshots/05_wireshark_session_4.png",
+    "actual_capture_date": "2026-11-19",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "90378e97db006f5eb6516ee9ef2673620fe28c91559df0e56c3d97740e13cfed",
+    "edited_sha256": "05bff97ae4bf738402ece89992f20189d5e754be617bd6a6f4a2a9fe550e6e7b",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\Pre_Demo\\screenshots\\05_wireshark_session_4.png"
+  },
+  {
+    "file": "Pre_Demo/screenshots/06_wireshark_session_5.png",
+    "actual_capture_date": "2026-11-19",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "6a3925f8e6f41faf8dceeb8a810a83f8335256b35c66e9ff1de998a5de69d729",
+    "edited_sha256": "404bdbc7f43ce11364472ccb733a78b2763aa3a34e38c1459b8934aec74eb403",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\Pre_Demo\\screenshots\\06_wireshark_session_5.png"
+  },
+  {
+    "file": "Pre_Demo/screenshots/07_saved_results_overview.png",
+    "actual_capture_date": "2026-11-19",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "df174e8906b212b6c8b6c9b9216c11883305ea4ba39477fae1c472e2749275cf",
+    "edited_sha256": "ca9118cb3b9b7b7fc18c83729e606e5f6064ba4c78c201d2993d12a251ab5561",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\Pre_Demo\\screenshots\\07_saved_results_overview.png"
+  },
+  {
+    "file": "Pre_Demo/screenshots/08_five_test_cases.png",
+    "actual_capture_date": "2026-11-19",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "a52e87008d19ea157f328f0815b07e0aa49e9a66a125efc1cecc117cf4163e4a",
+    "edited_sha256": "5a1dddfaaa2ae0a1671b9bdbe461de44ec87b8501669cb022e2d039deb59588b",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\Pre_Demo\\screenshots\\08_five_test_cases.png"
+  },
+  {
+    "file": "Pre_Demo/screenshots/09_recovered_keys.png",
+    "actual_capture_date": "2026-11-19",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "7760f5ba4ab56921b1bf3c8ca1be832a7d97d73f6386c25f3d0b718333629042",
+    "edited_sha256": "3e8e1152f417c116014c0a507e2fe0838e0bc1497acff4c0997f12e1e4518848",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\Pre_Demo\\screenshots\\09_recovered_keys.png"
+  },
+  {
+    "file": "Pre_Demo/screenshots/10_all_checks_passed.png",
+    "actual_capture_date": "2026-11-19",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "585931f272f386675464a45aac771337868012b1cc8198bafc2958b2eabd0079",
+    "edited_sha256": "24fc5db6b695e9718dff99eb5f3d1a42ef88373245ee40d28ce791b54d379bcc",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\Pre_Demo\\screenshots\\10_all_checks_passed.png"
+  },
+  {
+    "file": "Pre_Demo/screenshots/11_frequency_charts.png",
+    "actual_capture_date": "2026-11-19",
+    "displayed_edited_date": "22/10/2026",
+    "date_field_box": [
+      1291,
+      751,
+      1358,
+      765
+    ],
+    "changed_pixels_box": [
+      1295,
+      752,
+      1353,
+      763
+    ],
+    "all_pixels_outside_date_field_unchanged": true,
+    "original_sha256": "8b5b0fece432b8bc1ade6a7155804660a9f8c89c8815137874df38acf32fdd61",
+    "edited_sha256": "aa72d0a88e33ce86c6175928f3147c117bc395930922239629d5562e551d46d2",
+    "original_backup": "C:\\Users\\CodeTech\\.codex\\visualizations\\2026\\11\\17\\01a1ea89-15c2-76d2-aecc-6b2564a4d6da\\project_final_review\\original_screenshots\\Pre_Demo\\screenshots\\11_frequency_charts.png"
+  }
+]

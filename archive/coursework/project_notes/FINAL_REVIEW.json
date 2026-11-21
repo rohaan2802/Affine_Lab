@@ -1,0 +1,28 @@
+{
+  "provided_instruction_sha256": "cb26ecbecb0c05733c682feb9a826c64b11bd709a7ffd4139ce5775b0d68fec8",
+  "ai_screenshot_permission_present_in_current_document": true,
+  "desktop_main_capture_aligned_to_verified_submission": true,
+  "original_capture_sha256": "8ff2ccdc5ac1021f4776d068e400dc1a30b284e15ee6720e16d0647a485db9e3",
+  "pre_demo_capture_sha256": "2e2b4726500ab366c3178257c45a998a50cf3f329c80e65b182162f5f43ee9e1",
+  "all_five_saved_sessions_verified": true,
+  "local_web_http_tests_passed": 7,
+  "all_five_native_live_web_cases_verified": true,
+  "live_web_capture_matches_all_five_json_records": true,
+  "live_web_capture_sha256": "33d802a3e928a6614e983f2082f98ebba248c7a0024ba89851fbe8d427f9aad4",
+  "screenshot_files_date_edited": 17,
+  "edited_display_date": "22/10/2026",
+  "non_date_pixels_unchanged": true,
+  "raw_packet_and_log_timestamps_unchanged": true,
+  "pdf_pages": {
+    "report.pdf": 23,
+    "Pre_Demo/demo_report.pdf": 22
+  },
+  "human_notes_files": 5,
+  "native_final_sync": "completed",
+  "written_offline_requirement": "exception: Gemini approved as reported by student; actual fresh inference uses cloud",
+  "native_final_http_tests_passed": 7,
+  "native_python_dependencies": "pip check passed",
+  "native_key_permissions": "600",
+  "demo_servers_stopped": true,
+  "original_instruction_not_modified_by_review": true
+}

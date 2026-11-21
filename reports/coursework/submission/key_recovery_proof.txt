@@ -1,0 +1,100 @@
+SESSION 1: 675 ciphertext letters; mood is not used for recovery.
+Most frequent ciphertext letters: [('I', 80), ('J', 77), ('G', 53), ('V', 52), ('A', 51), ('T', 46)]
+Test all 312 valid Affine candidates; rank decrypted English by chi-squared.
+Leading candidates (chi-squared, a, b): [(35.2991846645043, 7, 6), (921.3396854385927, 5, 22), (966.1396941372856, 23, 8), (997.0533588920048, 9, 8), (1009.0987034491304, 23, 21)]
+Winning mapping: E -> I, T -> J.
+4a+b = 8 (mod 26); 19a+b = 9 (mod 26).
+Subtraction gives 15a = 1 (mod 26).
+26 = 1*15+11; 15 = 1*11+4; 11 = 2*4+3; 4 = 1*3+1.
+Back substitution: 1 = 7*15 - 4*26; inverse(15) = 7.
+a = 7*1 mod 26 = 7; b = 8-4*7 mod 26 = 6.
+gcd(7,26)=1. Extended Euclid for decryption:
+26 = 3 x 7 + 5
+7 = 1 x 5 + 2
+5 = 2 x 2 + 1
+2 = 2 x 1 + 0
+inverse(a)=15; 7*15 = 4*26 + 1.
+D(y) = 15*(y-6) mod 26.
+English E/T mappings are candidate hypotheses, not guaranteed rank-1/rank-2 identities.
+Independent checks: decoded UTF-8 request fields and re-encryption equality.
+
+SESSION 2: 737 ciphertext letters; mood is not used for recovery.
+Most frequent ciphertext letters: [('S', 80), ('E', 65), ('X', 63), ('I', 56), ('C', 55), ('V', 53)]
+Test all 312 valid Affine candidates; rank decrypted English by chi-squared.
+Leading candidates (chi-squared, a, b): [(46.206098818975455, 9, 8), (1161.676135795514, 11, 5), (1254.5951872169123, 11, 18), (1293.0035030760578, 25, 10), (1372.4592401841912, 19, 18)]
+Winning mapping: E -> S, T -> X.
+4a+b = 18 (mod 26); 19a+b = 23 (mod 26).
+Subtraction gives 15a = 5 (mod 26).
+26 = 1*15+11; 15 = 1*11+4; 11 = 2*4+3; 4 = 1*3+1.
+Back substitution: 1 = 7*15 - 4*26; inverse(15) = 7.
+a = 7*5 mod 26 = 9; b = 18-4*9 mod 26 = 8.
+gcd(9,26)=1. Extended Euclid for decryption:
+26 = 2 x 9 + 8
+9 = 1 x 8 + 1
+8 = 8 x 1 + 0
+inverse(a)=3; 9*3 = 1*26 + 1.
+D(y) = 3*(y-8) mod 26.
+English E/T mappings are candidate hypotheses, not guaranteed rank-1/rank-2 identities.
+Independent checks: decoded UTF-8 request fields and re-encryption equality.
+
+SESSION 3: 917 ciphertext letters; mood is not used for recovery.
+Most frequent ciphertext letters: [('C', 117), ('L', 79), ('I', 78), ('K', 75), ('P', 62), ('X', 61)]
+Test all 312 valid Affine candidates; rank decrypted English by chi-squared.
+Leading candidates (chi-squared, a, b): [(50.31556254175625, 11, 10), (1272.0990086598872, 3, 2), (1398.118168214793, 19, 24), (1582.0321454358977, 25, 2), (1679.7119927006156, 25, 15)]
+Winning mapping: E -> C, T -> L.
+4a+b = 2 (mod 26); 19a+b = 11 (mod 26).
+Subtraction gives 15a = 9 (mod 26).
+26 = 1*15+11; 15 = 1*11+4; 11 = 2*4+3; 4 = 1*3+1.
+Back substitution: 1 = 7*15 - 4*26; inverse(15) = 7.
+a = 7*9 mod 26 = 11; b = 2-4*11 mod 26 = 10.
+gcd(11,26)=1. Extended Euclid for decryption:
+26 = 2 x 11 + 4
+11 = 2 x 4 + 3
+4 = 1 x 3 + 1
+3 = 3 x 1 + 0
+inverse(a)=19; 11*19 = 8*26 + 1.
+D(y) = 19*(y-10) mod 26.
+English E/T mappings are candidate hypotheses, not guaranteed rank-1/rank-2 identities.
+Independent checks: decoded UTF-8 request fields and re-encryption equality.
+
+SESSION 4: 596 ciphertext letters; mood is not used for recovery.
+Most frequent ciphertext letters: [('U', 74), ('Z', 49), ('L', 48), ('W', 46), ('O', 44), ('C', 43)]
+Test all 312 valid Affine candidates; rank decrypted English by chi-squared.
+Leading candidates (chi-squared, a, b): [(38.749738016968, 15, 12), (933.3681954513027, 7, 24), (1057.7666604606627, 1, 20), (1148.4606944229565, 9, 1), (1159.2973269560998, 1, 7)]
+Winning mapping: E -> U, T -> L.
+4a+b = 20 (mod 26); 19a+b = 11 (mod 26).
+Subtraction gives 15a = 17 (mod 26).
+26 = 1*15+11; 15 = 1*11+4; 11 = 2*4+3; 4 = 1*3+1.
+Back substitution: 1 = 7*15 - 4*26; inverse(15) = 7.
+a = 7*17 mod 26 = 15; b = 20-4*15 mod 26 = 12.
+gcd(15,26)=1. Extended Euclid for decryption:
+26 = 1 x 15 + 11
+15 = 1 x 11 + 4
+11 = 2 x 4 + 3
+4 = 1 x 3 + 1
+3 = 3 x 1 + 0
+inverse(a)=7; 15*7 = 4*26 + 1.
+D(y) = 7*(y-12) mod 26.
+English E/T mappings are candidate hypotheses, not guaranteed rank-1/rank-2 identities.
+Independent checks: decoded UTF-8 request fields and re-encryption equality.
+
+SESSION 5: 623 ciphertext letters; mood is not used for recovery.
+Most frequent ciphertext letters: [('W', 68), ('J', 53), ('O', 52), ('B', 46), ('Q', 46), ('N', 45)]
+Test all 312 valid Affine candidates; rank decrypted English by chi-squared.
+Leading candidates (chi-squared, a, b): [(64.5930133575743, 15, 14), (935.9903914607117, 23, 22), (967.5166557910092, 1, 9), (1066.4679458418968, 7, 0), (1092.719316326317, 1, 22)]
+Winning mapping: E -> W, T -> N.
+4a+b = 22 (mod 26); 19a+b = 13 (mod 26).
+Subtraction gives 15a = 17 (mod 26).
+26 = 1*15+11; 15 = 1*11+4; 11 = 2*4+3; 4 = 1*3+1.
+Back substitution: 1 = 7*15 - 4*26; inverse(15) = 7.
+a = 7*17 mod 26 = 15; b = 22-4*15 mod 26 = 14.
+gcd(15,26)=1. Extended Euclid for decryption:
+26 = 1 x 15 + 11
+15 = 1 x 11 + 4
+11 = 2 x 4 + 3
+4 = 1 x 3 + 1
+3 = 3 x 1 + 0
+inverse(a)=7; 15*7 = 4*26 + 1.
+D(y) = 7*(y-14) mod 26.
+English E/T mappings are candidate hypotheses, not guaranteed rank-1/rank-2 identities.
+Independent checks: decoded UTF-8 request fields and re-encryption equality.

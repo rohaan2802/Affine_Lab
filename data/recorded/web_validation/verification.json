@@ -1,0 +1,43 @@
+{
+  "all_passed": true,
+  "model": "gemini-3.5-flash-lite",
+  "browser_live_cases": 5,
+  "captured_sessions": 5,
+  "ciphertext_fields": 15,
+  "pcap_sha256": "33d802a3e928a6614e983f2082f98ebba248c7a0024ba89851fbe8d427f9aad4",
+  "zero_kernel_drops": true,
+  "first_live_time": "2026-11-19T03:12:18+05:00",
+  "last_live_time": "2026-11-19T03:12:27+05:00",
+  "checks": [
+    {
+      "session": 1,
+      "packet_fields_match_live_json": true,
+      "key_matches_original_rule": true,
+      "input_and_reply_match": true
+    },
+    {
+      "session": 2,
+      "packet_fields_match_live_json": true,
+      "key_matches_original_rule": true,
+      "input_and_reply_match": true
+    },
+    {
+      "session": 3,
+      "packet_fields_match_live_json": true,
+      "key_matches_original_rule": true,
+      "input_and_reply_match": true
+    },
+    {
+      "session": 4,
+      "packet_fields_match_live_json": true,
+      "key_matches_original_rule": true,
+      "input_and_reply_match": true
+    },
+    {
+      "session": 5,
+      "packet_fields_match_live_json": true,
+      "key_matches_original_rule": true,
+      "input_and_reply_match": true
+    }
+  ]
+}

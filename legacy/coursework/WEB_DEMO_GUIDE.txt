@@ -1,0 +1,63 @@
+WHY GEMINI? WHY A WEB PAGE?
+==========================
+Gemini concern ka English reply generate karta hai. Hamari local scripts
+Affine encryption, TCP communication, frequency attack aur verification
+karti hain. Gemini encryption ya key recovery nahi karta.
+
+Gemini ki website par application chalani nahi. Sirf API key locally saved
+hoti hai aur server HTTPS se Gemini API ko call karta hai. Key browser mein
+nahi jati. Gemini instructor ki allowed cloud exception hai; fresh replies
+ke liye internet chahiye. Ollama ki zaroorat nahi.
+
+Assignment ke liye HTML UI mandatory nahi thi; original client terminal/TCP
+tha. Yeh extra local web UI demo ko explain aur show karne ke liye hai.
+
+NO-RUN PRESENTATION (PREFERRED)
+Open Desktop A#02/Open_Pre_Demo.url or Pre_Demo/index.html.
+All saved results, screenshots and evidence already recorded hain.
+No server, API, terminal command or internet needed to view that pack.
+
+OPTIONAL LIVE WEB DEMO (WSL PYTHON 3.12)
+The native WSL project now contains these files; its five-case live path was verified.
+For a new installation elsewhere, copy the files first.
+Keep web_demo.py, run_web_demo.sh and the web_ui folder together with the
+existing client.py, server.py, scripts, .env, test cases and output files.
+
+From a WSL terminal, after those files are present:
+wsl.exe -d Ubuntu -u root -- bash '/home/codetech/A02_PsycoSupport/psycare_lab/run_web_demo.sh'
+
+From Windows PowerShell:
+wsl -d Ubuntu -u root -- bash '/home/codetech/A02_PsycoSupport/psycare_lab/run_web_demo.sh'
+
+Then open in the Windows browser:
+http://127.0.0.1:8765
+
+The root launcher records only loopback TCP port 9999. The page uses port
+8765. Remote Gemini HTTPS/API key traffic is not captured by that filter.
+Do not start run_demo.sh or another server on port 9999 simultaneously.
+
+Buttons:
+- Show all five saved results: no model/API call.
+- Run selected case live: one real model reply, then independent attack/check.
+- Run all five live: five real sequential replies and checks.
+
+Fresh live records: web_runs/<actual_timestamp>_case_N.json.
+Fresh PCAP: web_runs/web_demo_<actual_timestamp>.pcap.
+Stop with Ctrl+C; wait for capture to flush before opening it in Wireshark.
+The existing saved run, original report and evidence are not overwritten.
+Charts in this UI are explicitly labeled as belonging to the saved run.
+
+WINDOWS SAVED-ONLY PREVIEW
+Windows Python 3.14 cannot load the instructor binary's Python 3.12 code.
+It can preview the saved page without live calls:
+cd 'C:\Users\CodeTech\Desktop\A#02\psycare_lab'
+python web_demo.py --saved-only
+Then open http://127.0.0.1:8765 . Live buttons remain disabled in this mode.
+
+PREPARATION STATUS
+The saved evidence pack passed offline viewer/data checks.
+The native WSL/Gemini browser integration completed five real cases successfully.
+Seven local HTTP checks passed; no JavaScript errors occurred.
+Its final raw PCAP matches all five live records and all15 ciphertext fields.
+Evidence is in ../live_web_validation, separate from the earlier saved run.
+The raw-TCP lab and saved presentation remain separately verified.

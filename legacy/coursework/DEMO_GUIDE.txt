@@ -1,0 +1,270 @@
+PREFERRED: SAVED PRESENTATION - NO RUN NEEDED
+Open C:\Users\CodeTech\Desktop\A#02\Open_Pre_Demo.url
+The saved pack includes all five cases, raw evidence, charts, recovered keys,
+full decryptions, screenshots and independent PASS checks.
+Viewing it needs no internet, key, terminal command or running server.
+Presentation order: Pre_Demo/SHOW_ORDER.txt.
+The live-run commands below are optional and are not needed for this demo.
+
+PSYCOSUPPORT - LIVE DEMO GUIDE (WSL + VS CODE)
+============================================
+
+1. PROJECT THA KYA? (SHORT EXPLANATION)
+--------------------------------------
+Yeh Information Security ka controlled cryptography lab hai.
+Five fictional concerns client se server ko bhejni thin, loopback traffic
+capture karna tha, ciphertext ki frequency analyze karke Affine keys recover
+karni thin, phir original readable messages aur replies nikalne thay.
+Finally weak security explain karni thi aur better alternatives batani thin.
+
+Flow:
+Client -> encrypted JSON over local TCP -> server -> Gemini API over HTTPS
+Server -> encrypted reply over local TCP -> client
+
+Client/server lab WSL Ubuntu mein chalta hai. Wireshark Windows par use hota
+hai. Gemini instructor ki allowed exception hai, is liye internet zaroori
+hai. Yeh version offline nahi hai. Ollama run/install karne ki zaroorat nahi.
+Messages synthetic test data hain; yeh real medical service nahi hai.
+
+2. SIMPLE TERMS - VIVA KE LIYE
+------------------------------
+Plaintext: original readable message, misal "HELLO".
+Ciphertext: encryption ke baad transformed message.
+Key: encryption/decryption control karne wali values. Affine key pair (a,b).
+Cipher: text encrypt/decrypt karne ka mathematical rule.
+Encryption: plaintext ko ciphertext banana.
+Decryption: ciphertext se plaintext wapas nikalna.
+Packet capture: application ke actual network packets record karna.
+Loopback: isi computer par local communication; IP 127.0.0.1.
+Frequency analysis: har letter kitni baar aya, us pattern se substitution
+samajhna. English mein E/T aksar common hain, magar har sample mein top two
+zaroor E/T nahi hotay.
+
+Affine cipher mein A=0, B=1, ... Z=25:
+  Encryption: C = (a*P + b) mod 26
+  Decryption: P = a_inverse*(C - b) mod 26
+  gcd(a,26)=1 hona chahiye, warna unique inverse nahi milta.
+
+Example: a=7, b=6, P='E'=4:
+  C = (7*4 + 6) mod 26 = 34 mod 26 = 8 = 'I'
+  inverse(7)=15 because 7*15=105=4*26+1.
+  P = 15*(8-6) mod 26 = 30 mod 26 = 4 = 'E'.
+
+Original server mood m se b=2*m aur a=next coprime integer above b leta hai.
+Mood cleartext mein jata hai: yeh additional security weakness hai.
+Frequency attack mood wali key rule use nahi karta; separate verification
+script baad mein recovered key ko original rule se compare karta hai.
+
+Input text pehle UTF-8 bytes se A-P letter pairs mein encode hota hai
+(armor), phir encrypt hota hai. Is liye request ka histogram normal English
+jaisa assume nahi karte. English server reply se key recover karte hain,
+phir request decrypt aur de-armor karte hain.
+
+3. VS CODE MEIN WSL PROJECT OPEN KARNA
+-------------------------------------
+VS Code ke bottom-left mein "WSL: Ubuntu" nazar aana chahiye.
+Terminal -> New Terminal. Terminal Linux/bash ka hona chahiye.
+Commands below Section 4 onwards WSL terminal ke liye hain.
+
+Agar folder dobara open karna ho, Windows PowerShell mein yeh ONE LINE:
+code --remote wsl+Ubuntu --new-window --folder-uri "vscode-remote://wsl+Ubuntu/mnt/c/Users/CodeTech/Desktop/A%2302/psycare_lab"
+
+Alternative, Ubuntu terminal mein:
+cd '/mnt/c/Users/CodeTech/Desktop/A#02/psycare_lab'
+code .
+
+VS Code Python interpreter is PC par:
+/home/codetech/psycare_lab/.venv/bin/python
+
+Agar interpreter dobara select karna ho:
+Ctrl+Shift+P -> Python: Select Interpreter -> Enter interpreter path.
+Upar wala Linux path select karein; Windows python.exe select na karein.
+
+Optional easy buttons (commands type karne ki jagah):
+Terminal -> Run Task -> select one of:
+  Demo: Analyze saved capture
+  Demo: Show recovered keys
+  Demo: Live run (backs up evidence)
+Yeh tasks isi WSL workspace ke liye configured hain.
+
+Agar VS Code folder-trust prompt dikhaye, apni local lab folder ka path
+verify karke trust decision khud karein.
+
+4. DEMO SE PEHLE QUICK CHECKS (WSL TERMINAL)
+-------------------------------------------
+cd '/mnt/c/Users/CodeTech/Desktop/A#02/psycare_lab'
+pwd
+uname -s
+/home/codetech/psycare_lab/.venv/bin/python --version
+source env.sh
+command -v tcpdump
+command -v tshark
+
+Expected: Linux, Python 3.12.3, existing capture-tool paths.
+Local .env mein key saved honi chahiye. .env open/show na karein during demo.
+Key print karne ke liye cat .env ya printenv GEMINI_API_KEY mat chalayein.
+
+5. MAIN LIVE DEMO - AUTOMATIC FIVE TEST CASES
+-------------------------------------------
+VS Code ke WSL terminal mein yeh ONE LINE paste karein:
+wsl.exe -d Ubuntu -u root -- unshare --uts --fork bash '/mnt/c/Users/CodeTech/Desktop/A#02/psycare_lab/run_demo.sh'
+
+Agar WSL mein wsl.exe command PATH mein na mile, same command ka full path:
+/mnt/c/Windows/System32/wsl.exe -d Ubuntu -u root -- unshare --uts --fork bash '/mnt/c/Users/CodeTech/Desktop/A#02/psycare_lab/run_demo.sh'
+
+Alternative: Windows PowerShell se yeh ONE LINE:
+wsl -d Ubuntu -u root -- unshare --uts --fork bash '/mnt/c/Users/CodeTech/Desktop/A#02/psycare_lab/run_demo.sh'
+
+In teen alternatives mein se sirf ONE command chalani hai.
+
+run_demo.sh kya karta hai:
+- Purana evidence/output/ciphertexts ka automatic backup banata hai:
+  C:\Users\CodeTech\Desktop\A#02\demo_backups\<actual_run_timestamp>
+- .env/key ko backup mein copy nahi karta.
+- Private hostname namespace mein rohaan-psylab naam set karta hai.
+- Capture sirf lo interface aur TCP port 9999 par start karta hai.
+- Original-protocol server start karta hai aur Gemini use karta hai.
+- test_cases.json ke five cases sequentially send karta hai.
+- Capture/server stop karta hai.
+- Captured ciphertexts extract, keys recover, plaintext decrypt aur verify.
+
+Expected final terminal messages:
+Captured 5 complete sessions, 15 exact ciphertext fields.
+Recovered and decrypted all five sessions; 312 candidates tested per session.
+PASS: all five recovered keys, request fields, replies and round trips match.
+
+Gemini response time/quota ke mutabiq time lag sakta hai. During the command,
+second server/client na chalayein. Successful finish ke baad lab processes
+automatically stop ho jate hain. Capture count new run mein change ho sakta
+hai; exact 50 packets required nahi. Five complete valid sessions required hain.
+
+IMPORTANT: Report.pdf existing submitted run ka record hai. Fresh demo se
+live outputs/PCAP update honge; report aur old screenshots automatically
+regenerate nahi hotay. Purani evidence automatic backup mein available hogi.
+
+6. INSTRUCTOR KO DIKHANE KA ORDER (ABOUT 5-8 MINUTES)
+----------------------------------------------------
+1) test_cases.json open karein: five made-up concerns aur numeric moods.
+2) server.py dikhayein: Gemini adapter aur 127.0.0.1 binding.
+   Original binary ke unchanged functions upstream_loader.py se load hotay
+   hain. Old original banner Groq-backed keh sakta hai; preceding actual
+   backend banner Gemini show karta hai. Actual provider Gemini hai.
+3) Section 5 ki ONE live-demo command run karein.
+4) Case 1...Case 5 aur final PASS instructor ko show karein.
+5) Windows Wireshark mein new evidence/capture.pcap open karein (Section 7).
+6) Follow TCP Stream mein encrypted request aur encrypted reply dikhayein.
+7) ciphertexts.csv open karein: five sessions ke 15 encrypted fields.
+8) output/session_1_frequency.png aur other charts open karein.
+9) output/recovered_keys.json: recovered a,b,a_inverse dikhayein.
+10) output/key_recovery_proof.txt: modular inverse aur equations explain.
+11) output/decrypted_sessions.txt: recovered concerns aur full replies.
+12) output/verification.json: all_passed=true aur independent checks.
+13) End: weakness aur UNIX sockets / authenticated TLS 1.3 alternatives.
+
+Useful short demo narration:
+"Yeh local client-server security lab hai. Hum synthetic messages bhejte
+hain aur sirf apna loopback traffic capture karte hain. Affine cipher ka
+small keyspace aur English letter patterns ciphertext se keys recover
+karne dete hain. Har mood ka reply separately analyze hota hai. Recovered
+plaintext re-encryption aur original client result se independently verify
+hota hai. Gemini approved cloud exception hai, is liye model part offline
+nahi. Strong model weak cipher ko secure nahi banata."
+
+7. WIRESHARK DEMO (WINDOWS APPLICATION)
+--------------------------------------
+Wireshark -> File -> Open:
+C:\Users\CodeTech\Desktop\A#02\psycare_lab\evidence\capture.pcap
+
+Display filter:
+tcp.port == 9999
+
+Packet select -> right-click -> Follow -> TCP Stream.
+Stream selector se 0,1,2,3,4 conversations dikhayein.
+Har request mein username_enc, mood, message_enc, api_key_enc hotay hain.
+api_key_enc empty hai; actual Gemini key local protocol par send nahi hoti.
+Reply ka ciphertext field encrypted English response hai.
+Show as ASCII aur Entire conversation select rakh sakte hain.
+
+Optional: VS Code WSL terminal se Windows Wireshark launch:
+'/mnt/c/Program Files/Wireshark/Wireshark.exe' -r "$(wslpath -w "$PWD/evidence/capture.pcap")" -Y 'tcp.port == 9999'
+
+Already-open old capture dekh rahe hon to File -> Reload / reopen file.
+New capture ke liye old stream window pehle close kar dein.
+
+8. ANALYSIS ONLY - NO NEW GEMINI CALL / NO NEW CAPTURE
+----------------------------------------------------
+cd '/mnt/c/Users/CodeTech/Desktop/A#02/psycare_lab'
+bash run_analysis.sh
+
+Yeh saved PCAP use karta hai, fresh API response nahi leta.
+Results/plots/verification regenerate hotay hain, capture same rehta hai.
+Sirf verification dobara karni ho:
+/home/codetech/psycare_lab/.venv/bin/python scripts/verify_results.py
+
+Sirf recovered numeric keys terminal mein show karni hon:
+/home/codetech/psycare_lab/.venv/bin/python scripts/show_keys.py
+
+For the five configured moods, expected (session, a, b, inverse):
+(1, 7, 6, 15)
+(2, 9, 8, 3)
+(3, 11, 10, 19)
+(4, 15, 12, 7)
+(5, 15, 14, 7)
+
+9. COMMON VIVA QUESTIONS - SHORT ANSWERS
+---------------------------------------
+Q: 312 keys kyun?
+A: 26 ke saath coprime 12 valid a values, aur 26 b values: 12*26=312.
+
+Q: Key kaise recover ki?
+A: Har server ciphertext par all valid keys test kiye; decrypted-letter
+frequency ko English reference se chi-squared score kiya. Lowest score
+candidate ko readable text, de-armoring, re-encryption aur independent
+verification se confirm kiya. Isay frequency-guided exhaustive search
+kehna accurate hai, sirf top two letters se blind guess nahi.
+
+Q: E/T se equations?
+A: Candidate mapping E->cE aur T->cT ho to 4a+b=cE, 19a+b=cT mod26.
+Subtract: 15a=cT-cE mod26. inverse(15)=7, so a=7*(cT-cE) mod26.
+Phir b=cE-4a mod26. Decryption ke liye a ka inverse use hota hai.
+
+Q: Different sessions ko pool kyun nahi kiya?
+A: Mood change hone se substitution/key change hoti hai. Har reply ka
+histogram aur key separately analyze karna zaroori hai.
+
+Q: Known plaintext aur repeated disclaimer ka kya role hai?
+A: Predictable names/wording letter guesses de sakte hain. Agar product
+fixed disclaimer add kare to woh strong clue hota hai. Is original server
+mein fixed disclaimer enforce nahi hota; hum ne fake disclaimer add nahi kiya.
+
+Q: Is this end-to-end secure?
+A: Nahi. Affine weak hai, key schedule mood se reveal hota hai, server
+plaintext dekhta/log karta hai aur Gemini ko prompt bhejta hai.
+
+Q: Better security?
+A: Local UNIX socket with restricted permissions + peer checks, ya TCP
+over authenticated TLS 1.3. Self-signed certificate use ho to proper
+trust/pinning chahiye; certificate checks disable nahi karne.
+
+10. TROUBLESHOOTING
+-------------------
+- VS Code bottom-left WSL: Ubuntu nahi: reopen folder in WSL.
+- API 429: quota/rate limit; wait/check account. Key screen par na dikhayein.
+- API 503: temporary provider issue; limited retries already included.
+- Model access error: local .env mein available GEMINI_MODEL set karein.
+- Permission denied tcpdump: Section 5 ka exact root helper command use karein.
+- Port 9999 already in use: earlier demo/server ko us terminal mein Ctrl+C
+  se stop karein; parallel run na karein. Rapid restart par original server
+  ka address-in-use error aaye to about one minute wait karke retry karein.
+- Python mismatch: original binary module Python 3.12 ka hai; configured
+  WSL interpreter use karein, Windows Python 3.14 nahi.
+- File path issue: A#02 path ko single/double quotes mein rakhein.
+- Capture failed: previous backup preserve karein; incomplete run ko
+  successful evidence na dikhayein. Saved verified capture ka analysis demo
+  alternative hai, magar instructor ko saved-data demo clearly batayein.
+- Emergency stop: live command wale terminal mein Ctrl+C.
+
+No ZIP needed. .env/key instructor ko show/share na karein.
+Packet dates remain actual. Screenshot taskbar display dates were edited to 22/10/2026; the edit record preserves actual capture chronology.
+
+Official VS Code WSL help: https://code.visualstudio.com/docs/remote/wsl

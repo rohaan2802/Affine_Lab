@@ -1,0 +1,54 @@
+{
+  "all_passed": true,
+  "session_checks": [
+    {
+      "session": 1,
+      "key_matches_original_after_recovery": true,
+      "response_matches_client": true,
+      "username_matches_input": true,
+      "concern_matches_input": true,
+      "reencryption_matches": true
+    },
+    {
+      "session": 2,
+      "key_matches_original_after_recovery": true,
+      "response_matches_client": true,
+      "username_matches_input": true,
+      "concern_matches_input": true,
+      "reencryption_matches": true
+    },
+    {
+      "session": 3,
+      "key_matches_original_after_recovery": true,
+      "response_matches_client": true,
+      "username_matches_input": true,
+      "concern_matches_input": true,
+      "reencryption_matches": true
+    },
+    {
+      "session": 4,
+      "key_matches_original_after_recovery": true,
+      "response_matches_client": true,
+      "username_matches_input": true,
+      "concern_matches_input": true,
+      "reencryption_matches": true
+    },
+    {
+      "session": 5,
+      "key_matches_original_after_recovery": true,
+      "response_matches_client": true,
+      "username_matches_input": true,
+      "concern_matches_input": true,
+      "reencryption_matches": true
+    }
+  ],
+  "ciphertext_fields": 15,
+  "pcap_sha256": "8ff2ccdc5ac1021f4776d068e400dc1a30b284e15ee6720e16d0647a485db9e3",
+  "original_server_sha256": "7149f7e524b70567a8d19360205105d7430dec5a9fa9557a4ab8bdf3b7ebf7dd",
+  "backend": {
+    "provider": "Gemini",
+    "model": "gemini-3.5-flash-lite",
+    "offline": false,
+    "instructor_permission": "Reported by student"
+  }
+}

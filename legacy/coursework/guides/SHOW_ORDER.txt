@@ -1,0 +1,44 @@
+SAVED PRE-DEMO - NOTHING TO RUN DURING PRESENTATION
+=================================================
+Open index.html in a browser. All data is local; no API, server, WSL terminal
+or internet connection is required to VIEW these recorded results.
+This is a saved demonstration, not a claim that the application is running live.
+
+SHOW ORDER (5-8 MINUTES)
+1. Overview: model, actual run time, five cases and PASS status.
+2. Test cases: five synthetic concerns and moods.
+3. Ciphertexts: expand a session; show encrypted request/reply.
+4. Keys & proof: explain (a,b), inverse and the 312-key search.
+5. Decrypted: compare original concern with recovered message and reply.
+6. Charts: letter frequencies, English reference and recovered English.
+7. Screenshots: actual desktop, taskbar and five Wireshark streams.
+8. Verification: all five independent checks; show final analysis PASS.
+9. Logs: actual run, model backend and tcpdump zero-drop result.
+10. Code: client, Gemini adapter, extraction, analysis and independent checks.
+
+Click 'Toggle one-section presentation' to show only the selected section.
+Click it again to return to the full page. Use the top navigation to move.
+Click a screenshot/chart to open its full-size original PNG.
+
+IF ASKED FOR PRIMARY EVIDENCE
+Open evidence/pre_demo_capture.pcap in Windows Wireshark.
+Filter: tcp.port == 9999
+Follow -> TCP Stream; inspect streams 0 through 4.
+No new capture, model request or command is needed.
+The exact stream exports are also in evidence/session_N_follow_tcp.txt.
+
+QUICK EXPLANATION
+Plaintext = readable text. Ciphertext = encrypted text.
+Affine key = (a,b); encryption C=(a*P+b) mod26, A=0...Z=25.
+Decrypt with inverse(a): P=inverse(a)*(C-b) mod26.
+12 valid a values * 26 b values = 312 keys. English-frequency scores rank
+the candidates, then independent checks confirm the result.
+Moods use different keys; do not pool different ciphertext substitutions.
+Cleartext mood also reveals the original deterministic key schedule.
+
+HONEST LIMITS
+The original model run used Gemini, so it was cloud-assisted, not offline.
+Only viewing this saved pack is offline. Replies are synthetic lab output,
+not medical advice. Screenshot taskbar dates were edited to 22/10/2026; actual capture dates are documented in the edit record.
+The .env and its API key are not in this pack. Do not open your private .env
+during presentation. The previously submitted report is a separate record.

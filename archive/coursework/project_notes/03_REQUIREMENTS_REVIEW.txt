@@ -1,0 +1,150 @@
+REQUIREMENTS REVIEW - FACTUAL STATUS
+====================================
+
+Read alongside 01_COMPLETE_PROJECT_GUIDE.txt and the machine-readable
+FINAL_REVIEW.json in this folder. This document distinguishes successful
+evidence from optional features that still need validation.
+
+INSTRUCTIONS REVIEWED
+----------------------
+Current provided file: assign 2 revised.docx (21355 bytes at this review).
+SHA-256: cb26ecbecb0c05733c682feb9a826c64b11bd709a7ffd4139ce5775b0d68fec8
+It explicitly permits AI/screenshot editing in ethics item5. No instruction
+text was added or changed by the assistant in this review.
+The heading says Assignment #1, while the working folder is A#02 and the
+report uses Assignment2. This naming inconsistency is recorded, not hidden.
+
+TASK1 - ENVIRONMENT / MODEL
+---------------------------
+Verified original/raw-TCP lab uses WSL Ubuntu and Python3.12.3.
+Native project: /home/codetech/A02_PsycoSupport/psycare_lab.
+It has its own Python environment and bundled tcpdump/TShark tools.
+Hostname used in isolated UTS namespace: rohaan-psylab.
+Server is loopback-only127.0.0.1; original raw protocol port9999.
+
+Written brief asks offline Ollama. Final model is Gemini3.5 Flash-Lite using
+the instructor exception reported by the student. This means fresh model
+inference is cloud-assisted/internet-dependent. It is NOT literal offline
+completion. Keep the instructor's exception/permission available if grading
+strictly against the written brief. AI-use permission is separately explicit
+in the current file and does not itself state a Gemini exception.
+
+TASK2 - CAPTURE / FIVE TEST CASES
+--------------------------------
+Five distinct synthetic inputs exist in test_cases.json.
+Five complete request/reply sessions and15 encrypted fields are exported.
+Raw PCAP + five actual TShark Follow TCP Stream exports exist.
+Only loopback traffic for the actual TCP9999 lab port was captured.
+Captured pre-demo packets50, dropped0 for the successful saved run.
+Screenshots support the primary PCAP; screenshots are not fabricated packet
+outputs. Taskbar display-date edits are separately documented.
+
+Desktop main folder had a later capture mismatch on review. Current files
+were preserved before restoring the verified submission baseline. The raw
+capture now matches its verification hash again. Pre_Demo remains a
+separate, newer successful run; mixing these runs would be incorrect.
+
+TASK3 - ANALYSIS / MATHEMATICAL PROOFS / DECRYPTION
+------------------------------------------------
+26-letter per-session frequency counts/percentages are available.
+130-row CSV =5 sessions*26 letters.
+Five individual ciphertext-vs-English charts and recovered-English chart.
+312 valid candidates per session ranked by chi-squared English fit.
+All five recovered (a,b) pairs and modular inverses available.
+Full per-session congruences and Euclidean calculations available.
+All usernames/concerns and full server replies decrypted and verified.
+
+Method disclosure: frequency-guided exhaustive search plus proof/validation;
+not a claim that ciphertext frequency rank1/rank2 always maps to E/T.
+Independent verifier compares original key/input/client output only after
+the attack. It does not feed the key into the recovery procedure.
+
+TASK4 - SECURITY ENGINEERING
+----------------------------
+Explains small keyspace, substitution leakage, preserved spaces, deterministic
+mood keys, predictable wording and plaintext server logs.
+Discusses fixed disclaimers as a possible known-plaintext clue without
+inventing a disclaimer that the original server does not enforce.
+Explains restricted UNIX sockets and authenticated TLS1.3 alternatives.
+Clarifies TLS does not automatically protect readable local logs or a
+compromised host. Affine attack is not a TLS break.
+
+DELIVERABLES / PRESENTATION
+---------------------------
+report.pdf and report.html exist for the original verified submission run.
+ciphertexts.csv, scripts and evidence exist.
+Pre_Demo includes a self-contained offline viewer and printable report,
+all five test cases, full ciphertexts/decryptions, proofs, charts, raw PCAP,
+stream exports, actual logs, source copies and11 desktop screenshots.
+Offline viewer/data checks previously passed with zero external requests.
+ZIP was deliberately removed after the user said it had been submitted.
+Do not treat the historical submission_check.json as a currently existing ZIP.
+
+SCREENSHOT EDIT REVIEW
+-----------------------
+Final requested display date:22/10/2026.
+Current instruction file permits screenshot editing; user explicitly approved
+Python pixel editing.17 active screenshot files were edited only in the
+bottom-right date field. All outside pixels checked unchanged.
+Originals are backed up. Both PDFs include a date-edit addendum.
+Capture timestamps, ciphertexts, reply text and actual run dates are unchanged.
+See 04_SCREENSHOT_EDIT_RECORD.txt for exact hashes/rectangle/provenance.
+
+OPTIONAL LIVE WEB UI
+--------------------
+HTML UI was not a required deliverable in the written assignment.
+Desktop web_demo.py, web_ui/, run_web_demo.sh and guide are prepared.
+Seven local HTTP tests passed; JavaScript syntax check passed.
+Saved-only preview explicitly disables live actions; it never fakes a live
+model reply. Private .env/source files are not served by the HTTP routes.
+The new live WSL/Gemini browser path has now passed a real five-case end-to-end test.
+All five fresh replies, recovered keys and checks passed with no JavaScript errors.
+
+Earlier native update/pack mirror was not executed because automatic approval
+review was unavailable due a usage limit. It was not an unsafe-action ruling.
+If a later successful native sync/live check is completed in this review,
+an explicit FINAL UPDATE below and FINAL_REVIEW.json record that result.
+
+PRACTICAL GRADING LIMITS
+------------------------
+- Offline deployment requirement is an exception, not literally fulfilled.
+- A saved demo is not a claim that a live server is running.
+- A prepared web button is not proof of a successful live Gemini test.
+- Edited taskbar dates do not establish earlier real capture dates.
+- Roll/section/instructor metadata should only use known correct values;
+  missing personal fields must not be invented.
+- Actual grades/instructor acceptance cannot be guaranteed by this review.
+
+CURRENT VERIFIED BASELINE
+-------------------------
+Original/submission PCAP:
+8ff2ccdc5ac1021f4776d068e400dc1a30b284e15ee6720e16d0647a485db9e3
+Newer pre-demo PCAP:
+2e2b4726500ab366c3178257c45a998a50cf3f329c80e65b182162f5f43ee9e1
+These are different successful runs. They should not be made identical by
+renaming timestamps or replacing values in logs.
+
+FINAL UPDATE - THIS REVIEW
+==========================
+Native web files and saved-pack synchronization completed after approval review became available.
+Seven native HTTP tests passed. Five real browser-initiated Gemini cases passed.
+The final web PCAP was independently extracted and all15 encrypted fields matched
+the five saved JSON records. Zero kernel drops. Live backend was stopped cleanly.
+Actual live validation times:19Nov2026 03:12:18 through03:12:27 +05:00.
+Evidence: live_web_validation/; capture SHA-256:
+33d802a3e928a6614e983f2082f98ebba248c7a0024ba89851fbe8d427f9aad4
+
+Remaining grading exception: Gemini is cloud-assisted, while the written brief asks offline Ollama.
+That exception still relies on the instructor permission reported by the student.
+Optional live web feature is no longer pending.
+
+FINAL FILE/ENVIRONMENT CHECK
+============================
+Desktop and native WSL notes, documented edited screenshots, reports and
+saved pack were synchronized. The active main Desktop capture was restored
+to its verified submission baseline; newer runs remain separate.
+Final native Python3.12 syntax/shell checks and7 HTTP checks passed.
+Native pip check passed. Local .env remains owner-only600.
+Live web/capture processes were stopped; demo listener ports are free.
+Current instruction file hash stayed unchanged throughout this review.
+Original report now23 pages; saved pre-demo report22 pages including date-edit addenda.

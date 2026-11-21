@@ -1,0 +1,12 @@
+{
+  "http_tests_passed": 7,
+  "javascript_syntax_check": "passed",
+  "browser_automation_check": "passed: actual WSL/Gemini browser flow, five fresh cases, no JavaScript errors",
+  "native_live_end_to_end": "passed",
+  "native_install_and_pack_mirror": "completed after approval review became available",
+  "saved_evidence_pack": "five real sessions and offline viewer previously verified",
+  "live_web_capture_sha256": "33d802a3e928a6614e983f2082f98ebba248c7a0024ba89851fbe8d427f9aad4",
+  "live_web_capture_and_records_independently_matched": true,
+  "live_web_evidence_folder": "live_web_validation",
+  "web_shutdown_ports_checked_free": true
+}

@@ -1,0 +1,8 @@
+{
+  "all_five_live_cases_passed": true,
+  "ui_live_label": true,
+  "loopback_capture_enabled": true,
+  "model": "gemini-3.5-flash-lite",
+  "no_javascript_errors": true,
+  "final_status": "Live tests completed and verified. Their JSON records are saved in web_runs/."
+}

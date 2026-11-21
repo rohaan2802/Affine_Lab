@@ -1,0 +1,5 @@
+{
+  "folders": [{"path": "."}],
+  "settings": {"python.defaultInterpreterPath": "${workspaceFolder}/.venv", "files.exclude": {"**/__pycache__": true}},
+  "extensions": {"recommendations": ["ms-python.python", "ms-vscode-remote.remote-wsl"]}
+}

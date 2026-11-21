@@ -1,0 +1,511 @@
+PSYCOSUPPORT / INFORMATION SECURITY LAB
+COMPLETE EASY GUIDE - ROMAN URDU + SIMPLE ENGLISH
+================================================
+
+YEH FILE KIS LIYE HAI?
+---------------------
+Is file ko shuru se parhne par bina technical background ke samajh aa sakta
+hai ke project kya hai, assignment mein kya karna tha, hum ne kya kiya,
+kaise kiya, kyun kiya, aur results kya mile. Formulas aur viva examples bhi
+isi file mein hain. Commands ka detailed menu DEMO_GUIDE.txt mein hai.
+
+Related files in this notes folder:
+02_PROJECT_CHAT_AND_VIVA.txt - discussion history aur easy Q&A.
+03_REQUIREMENTS_REVIEW.txt - requirement-by-requirement review/status.
+04_SCREENSHOT_EDIT_RECORD.txt - screenshot display-date edit ka record.
+05_ACTUAL_OUTPUTS_EXPLAINED.txt - actual inputs, full replies and checked outputs.
+
+1. PROJECT EK LINE MEIN
+=======================
+Hum ne apni controlled local application ka encrypted traffic record kiya,
+Affine cipher ki key recover ki, aur original messages/replies wapas nikal
+kar dikhaya ke yeh classical encryption sensitive data ke liye weak hai.
+
+Yeh Gemini ko hack karne, HTTPS todne ya kisi doosre network ka traffic
+dekhne ka project nahi hai. Sirf apne lab ki synthetic messages use huin.
+
+2. BASIC IDEA - EK DAILY-LIFE EXAMPLE
+====================================
+Sochiye aap readable letter ko ek simple letter-substitution rule se badal
+kar dost ko bhejte hain. Dost ko rule ki secret values maloom hain, is liye
+woh original letter parh leta hai. Lekin agar rule bahut simple ho aur us
+ki sirf kuch hundred possibilities hon, koi observer patterns se rule
+guess/test karke letter parh sakta hai. Hum ne exactly yahi weakness test ki.
+
+Encryption lagana aur strong encryption lagana do alag cheezen hain.
+Sirf unreadable-looking letters security ka proof nahi hotay.
+
+3. ASSIGNMENT MEIN KYA KARNA THA?
+=================================
+Task 1: Local application aur language-model backend deploy karna.
+Written brief offline Ollama setup kehta hai. Student ne separately report
+kiya ke instructor ne Gemini API alternative allow kiya; isi exception par
+hamara final model backend Gemini hai. Isay offline inference nahi kehte.
+
+Task 2: Five different fictional concerns bhejna. Apne loopback interface
+par client/server traffic capture karna aur exact ciphertext export karna.
+
+Task 3: Letter-frequency tables/charts banana, English frequencies se
+comparison karna, Affine key pair (a,b) recover karna, modular inverse ki
+working dena aur tamam five sessions ke messages/replies decrypt karna.
+
+Task 4: Weakness explain karna, predictable wording/known plaintext ka role
+discuss karna, aur kam az kam two better local communication alternatives.
+
+Required submission: report.pdf, ciphertexts.csv, scripts/ aur optional
+evidence/. ZIP pehle submit hua; user ki instruction par local ZIP remove
+kar di gayi. ZIP ko dobara automatically generate nahi kiya gaya.
+
+4. CURRENT INSTRUCTIONS AUR AI PERMISSION
+========================================
+Current Desktop document: assign 2 revised.docx.
+Ethics item 5 ki exact wording:
+"You can completely use AI and also use AI For Screenshot Editing if you
+work it lately."
+
+Yeh wording CURRENT provided file mein verify hui hai. Original instruction
+file ko is notes task mein change nahi kiya gaya. Pehle padhe gaye version
+ki wording different thi; is liye early conversation mein AI editing par
+different guidance di gayi thi. Current file ka snapshot/hash review mein
+record kiya gaya hai. Date-edit permission aur actual packet capture time
+ko alag concepts samajhna chahiye; details screenshot edit record mein hain.
+
+Current written brief phir bhi offline Ollama kehta hai. AI-use permission
+khud Gemini exception ka written proof nahi hai. Gemini permission student
+ne conversation mein separately report ki thi; report is difference ko
+clearly document karti hai.
+
+5. IMPORTANT TERMS - BILKUL SIMPLE WORDS
+=======================================
+Client: application ka woh hissa jahan user input deta hai.
+Server: input receive/process karke reply bhejne wala application hissa.
+Local: isi computer par chalne wala.
+WSL: Windows ke andar Linux environment. Yahan Ubuntu use hua.
+Loopback: apni machine se apni machine ki communication. IP 127.0.0.1.
+Port: application service ka numbered entry point. Raw lab TCP port 9999.
+Packet: network data ka chhota transport unit.
+PCAP: actual captured packets ki file.
+TCP stream: ek connection ki dono directions ka reassembled data.
+JSON: named fields mein structured text, jaise mood aur message_enc.
+Plaintext: readable original text.
+Ciphertext: encryption ke baad transformed text.
+Cipher: encrypt/decrypt karne ka rule/algorithm.
+Key: rule ko control karne wali values; Affine mein (a,b).
+Encryption: readable text ko ciphertext banana.
+Decryption: ciphertext se readable text wapas nikalna.
+Cryptanalysis: intended secret key jaane baghair cipher ki weakness se
+message/key recover karne ki analysis.
+Frequency: koi letter kitni baar nazar aya.
+Modulus / mod: division ke baad remainder.
+API: software ke through doosri service se request/reply lena.
+API key: service ka private credential; cipher key (a,b) se different hai.
+HTTPS/TLS: network par encrypted, authenticated transport channel.
+
+6. GEMINI KYUN USE HUA AUR KYA KARTA HAI?
+========================================
+Gemini fictional concern ko samajh kar English support-style reply generate
+karta hai. Is se natural-language text milta hai jis par classical cipher
+aur frequency analysis demonstrate ki ja sakti hai.
+
+Gemini hamari Affine encryption, packet extraction ya key recovery nahi
+karta. Yeh sab local Python scripts ka kaam hai.
+
+Local Ollama/model PC par chalane ki jagah Gemini API use karne se local
+inference model load nahi karna padta. Is choice ko student ki reported
+instructor permission support karti hai. Fresh replies ke liye internet
+aur valid API key chahiye. Gemini website ko manually open karke prompts
+paste nahi karte; local server API call karta hai.
+
+Final verified pre-demo model: gemini-3.5-flash-lite.
+Model selection local .env mein GEMINI_MODEL se pin ki gayi. Har test se
+pehle model manually select karne ki zaroorat nahi.
+Gemini 3.8 Flash available-list mein tha, lekin test request timeout hui.
+Is liye repeatedly successful 3.5 Flash-Lite ko reliable demo ke liye use
+kiya. Failed request ko successful evidence ke taur par include nahi kiya.
+
+7. COMPLETE MESSAGE FLOW - STEP BY STEP
+======================================
+Example input: "Mujhe exams ki tension hai."
+
+Step 1: Client username, numeric mood aur fictional concern leta hai.
+Step 2: Username/concern ko UTF-8 bytes aur A-P pairs mein encode karta hai.
+        Is encoding ko armor kehte hain. Yeh strong encryption nahi hai.
+Step 3: Client mood se original Affine key derive karke armored text encrypt
+        karta hai. Local raw TCP par encrypted JSON server ko jata hai.
+Step 4: Local server key derive karta hai, Affine decrypt aur de-armor karke
+        readable username aur concern hasil karta hai.
+Step 5: Server readable application message Gemini API ko HTTPS par bhejta
+        hai. Network par TLS is request ko protect karta hai.
+Step 6: Gemini endpoint par TLS process hota hai, model concern process
+        karta hai aur English reply generate karta hai.
+Step 7: Reply HTTPS se local server tak protected transport mein aata hai.
+        Local server ke application layer ko readable reply milta hai.
+Step 8: Original server reply ko uppercase A-Z aur spaces mein clean karta
+        hai, phir Affine key se encrypt karke local client ko bhejta hai.
+Step 9: Client apni key se reply decrypt karke readable text dikhata hai.
+
+Diagram:
+CLIENT -- weak Affine ciphertext / loopback TCP --> LOCAL SERVER
+LOCAL SERVER -- HTTPS/TLS --> GEMINI API
+GEMINI API -- HTTPS/TLS reply --> LOCAL SERVER
+LOCAL SERVER -- weak Affine ciphertext / loopback TCP --> CLIENT
+
+Tester's parallel role:
+Local port-9999 packets record -> exact ciphertext fields extract -> reply
+ki frequency analyze -> key recover -> requests/reply decrypt -> verify.
+
+8. AGAR HTTPS ENCRYPTED HAI TO PHIR PLAINTEXT KAHAN HAI?
+======================================================
+Application plaintext aur network encryption ko confuse na karein.
+Server readable message ko samajhta hai. Jab woh HTTPS request bhejta hai,
+TLS us readable data ko transport ke liye encrypt karta hai. Gemini side
+par TLS terminate hone ke baad application message readable hota hai.
+Return par bhi yahi process ulta hota hai.
+
+Hum TLS session keys recover nahi kar rahe. Hum sirf apni local Affine layer
+ko analyze karte hain. Gemini se server tak unprotected internet plaintext
+bhejne ka claim ghalat hoga. Server ko readable reply milna aur internet
+par reply readable travel karna ek hi baat nahi.
+
+9. AFFINE CIPHER KI COMPLETE BASIC MATH
+======================================
+Letters ko numbers dein: A=0, B=1, C=2, ... Z=25.
+
+Encryption:
+  C = (a*P + b) mod 26
+P original letter ka number; C ciphertext letter ka number.
+a multiplier; b shift; key pair = (a,b).
+
+Valid multiplier ki condition:
+  gcd(a,26) = 1
+Yani a aur 26 ka common factor sirf 1 ho.
+
+Valid a values (mod26):
+  1,3,5,7,9,11,15,17,19,21,23,25
+b values: 0..25.
+Keyspace: 12*26 = 312 keys. Yeh modern security ke muqablay mein bahut chhota.
+
+Decryption:
+  P = a_inverse*(C-b) mod 26
+Jahan a_inverse ka matlab:
+  a*a_inverse = 1 (mod 26)
+Yeh ordinary 1/a division nahi; modular multiplicative inverse hai.
+
+Example key (7,6), letter E:
+  P=4
+  C=(7*4+6) mod26 = 34 mod26 = 8 = I
+  inverse(7)=15 because 7*15=105=4*26+1
+  P=15*(8-6) mod26 = 30 mod26 = 4 = E
+
+Simple unarmored word example:
+  HELLO -> DIFFA with key (7,6).
+Actual client inputs are armored FIRST, so actual message_enc for HELLO
+will not simply be DIFFA. DIFFA is only the basic alphabet example.
+
+10. ORIGINAL MOOD-BASED KEY RULE
+================================
+Mood m numeric 1..10 hai.
+  b = 2*m
+  a = smallest integer greater than b that is coprime with 26
+
+Our five configured cases:
+  Case  Mood  a   b   a_inverse
+  1     3     7   6   15
+  2     4     9   8   3
+  3     5     11  10  19
+  4     6     15  12  7
+  5     7     15  14  7
+
+Cleartext mood se key schedule reveal ho sakta hai. Yeh extra design flaw
+hai. Hamara attack script recovery ke liye yeh schedule import/use nahi
+karta; verification script BAAD mein original schedule se compare karta hai.
+
+11. MODULAR INVERSE - EXTENDED EUCLID EXAMPLE
+============================================
+Find inverse of 7 mod26:
+  26 = 3*7 + 5
+   7 = 1*5 + 2
+   5 = 2*2 + 1
+Back substitute:
+  1 = 5 - 2*2
+    = 5 - 2*(7-5)
+    = 3*5 - 2*7
+    = 3*(26-3*7) - 2*7
+    = 3*26 - 11*7
+So -11*7 = 1 mod26, and -11 mod26 = 15.
+Therefore inverse(7)=15. Check: 7*15 mod26 = 1.
+
+12. FREQUENCY ANALYSIS KAISE KAAM KARTI HAI?
+===========================================
+English letters equally common nahi hotay. Reference proportions mein E
+about 12.702%, T 9.056%, A 8.167%, O 7.507% aur I 6.966% hain.
+Affine monoalphabetic substitution ek plaintext letter ko ek fixed cipher
+letter se replace karti hai. Counts ke patterns aur spaces preserve rehte
+hain; letters ke naam badal jate hain.
+
+Hum har session ki server reply alag analyze karte hain. Moods badalne se
+keys badalti hain; mixed keys ko ek histogram mein pool nahi karna chahiye.
+Armored request ka distribution normal English nahi hota. Pehle English
+reply se key recover hoti hai, phir matching requests decrypt/de-armor hoti hain.
+
+Procedure:
+1) Captured ciphertext mein A-Z counts nikalein; spaces exclude karein.
+2) Har 312 valid key candidate se reply decrypt karein.
+3) Candidate English counts ko reference frequencies se compare karein.
+4) Chi-squared score calculate aur candidates rank karein.
+5) Best candidate ko independent checks se confirm karein.
+
+Formula:
+  Expected_i = N * EnglishFrequency_i / 100
+  ChiSquared = SUM_i ((Observed_i - Expected_i)^2 / Expected_i)
+
+N candidate plaintext ke alphabetic letters ka total count hai.
+Lower score ka matlab reference English distribution se closer match.
+Yeh score probability, security percentage ya guaranteed confidence nahi.
+Short text par frequency alone uncertain ho sakti hai; verification zaroori hai.
+
+Method ko accurately "frequency-guided exhaustive search over 312 Affine
+keys, with modular recovery proof and independent verification" kehte hain.
+Sirf top two letters ko blindly E/T declare karke success claim nahi kiya.
+
+13. E/T SE KEY RECOVERY KI EQUATIONS
+===================================
+Candidate mapping mein English E(4) ka ciphertext cE aur T(19) ka cT ho:
+  4a+b = cE mod26
+ 19a+b = cT mod26
+Subtract:
+ 15a = cT-cE mod26
+inverse(15)=7, because 15*7=105=4*26+1.
+  a = 7*(cT-cE) mod26
+  b = cE-4a mod26
+Then calculate inverse(a) for decryption.
+
+Case 1 example: E->I(8), T->J(9).
+  4a+b=8; 19a+b=9; 15a=1 mod26
+  a=7; b=8-4*7=-20 mod26=6
+  inverse(a)=15
+  P=15*(C-6) mod26
+
+All five sessions ki full numerical proof output/key_recovery_proof.txt mein.
+Candidate E/T correspondences frequency-scored decryption se justify huin;
+unhein automatically rank-1/rank-2 letters assume nahi kiya gaya.
+
+14. FIVE TEST CASES AUR ACTUAL VERIFIED OUTPUTS
+==============================================
+Case 1, mood3: exams aur sleep/anxiety ki fictional concern.
+Case 2, mood4: new city/university aur loneliness ki fictional concern.
+Case 3, mood5: part-time work + full-time studies ka pressure.
+Case 4, mood6: sibling disagreement aur emotional tension.
+Case 5, mood7: group-project deadline aur unresponsive team.
+Username: Rohaan. No actual patient record use nahi hua.
+
+Verified pre-demo run: 19 November 2026, 00:56:59 +05:00.
+Model: gemini-3.5-flash-lite.
+Captured packets: 50; kernel drops: 0.
+Complete sessions: 5.
+Encrypted fields: 15 = 5*(username_enc + message_enc + server ciphertext).
+Mood cleartext field hai; api_key_enc empty hai, isay ciphertext count nahi kiya.
+
+Recovered keys same table Section10 mein hain.
+Pre-demo chi-squared scores (rounded):
+  Case 1: 31.23, next candidate 908.37
+  Case 2: 43.62, next candidate 983.93
+  Case 3: 46.20, next candidate 1126.19
+  Case 4: 24.81, next candidate 1006.59
+  Case 5: 29.59, next candidate 850.57
+Exact full precision values JSON mein hain; table rounding sirf presentation hai.
+
+The final check reported PASS for all five keys, usernames, concerns,
+replies and re-encryption comparisons. Full replies same screenshots mein
+sirf chhota fragment nahi: complete text decrypted_sessions.txt/CSV/HTML mein.
+
+15. VERIFICATION NE EXACTLY KYA CHECK KIYA?
+==========================================
+- Recovered (a,b) original implementation ke expected pair se match?
+- Username decrypt/de-armor ke baad original input se match?
+- Concern decrypt/de-armor ke baad original input se match?
+- Attacker-recovered reply client-side decryption se match?
+- Recovered plaintext ko re-encrypt karne par exact ciphertext wapas aya?
+- Five complete request/reply sessions aur all 15 exported fields present?
+- PCAP ka SHA-256 recorded verification ke hash se match?
+
+Re-encryption alone key correctness ka complete proof nahi: har invertible
+candidate apne decrypted text ko re-encrypt kar sakta hai. Is liye original
+input/client reply aur independent key comparisons bhi kiye gaye.
+
+16. PACKET CAPTURE AUR EXPORT
+==============================
+Actual supplied binary TCP port9999 use karti hai. Brief ka port5000 example
+tha, fixed obligation nahi. Capture lo interface par tcp port9999 filtered hai.
+
+Capture filter:
+  tcp port 9999
+Wireshark display filter:
+  tcp.port == 9999
+Follow TCP Stream: streams0..4, each case ki request/reply.
+
+Extraction script TCP sequence numbers se payload bytes reassemble karti
+hai, retransmission conflicts/gaps detect karti hai aur exact JSON fields
+CSV mein export karti hai. Key recovery plaintext admin log se copy nahi hui.
+
+Actual packet count future run mein segmentation/retransmissions ki wajah
+se change ho sakta hai; exact 50 universal requirement nahi. Five complete
+valid sessions aur reproducible extraction important hain.
+
+17. FILES KA MAP - KAHAN KYA HAI?
+=================================
+Desktop main folder: C:\Users\CodeTech\Desktop\A#02
+  assign 2 revised.docx   current provided instructions; unchanged by us
+  project_notes/         this explanation, chat notes, audit, date-edit record
+  report.pdf/html        original verified submission-run report
+  Open_Pre_Demo.url       one-click saved evidence viewer
+  Pre_Demo/index.html    complete offline saved viewer
+  Pre_Demo/demo_report.pdf  printable saved evidence report
+  Pre_Demo/SHOW_ORDER.txt  instructor ko dikhane ka sequence
+  Pre_Demo/ciphertexts.csv actual pre-demo encrypted fields
+  Pre_Demo/evidence/     raw PCAP + five TShark stream exports
+  Pre_Demo/output/       charts, tables, keys, decryptions, logs, verification
+  Pre_Demo/screenshots/  eleven desktop screenshots
+  Pre_Demo/source/       source copies for inspection; no private .env
+  psycare_lab/           main scripts and optional web UI
+  demo_backups/          previous runs, separate from active saved presentation
+
+Native Ubuntu full project:
+  /home/codetech/A02_PsycoSupport/psycare_lab
+It has its own .venv Python3.12 and .tools tcpdump/TShark bundle.
+This original native raw-TCP project completed actual successful live runs.
+Latest optional web UI, notes and saved-pack synchronization status is
+explicitly listed in 03_REQUIREMENTS_REVIEW.txt; do not assume pending copy
+operations finished just because Desktop files exist.
+
+Important code:
+  server.py: original server functions loaded; Groq-compatible Gemini adapter
+  upstream_loader.py: supplied PyInstaller module extraction/loading
+  original_server: instructor's original Linux binary, unchanged
+  client.py: synthetic input armor/encryption and TCP client
+  test_cases.json: five cases
+  scripts/extract_tcp.py: raw TCP ciphertext extraction
+  scripts/analyze.py: frequencies, key ranking, mathematical proofs, plots
+  scripts/common.py: independent crypto/math and English frequencies
+  scripts/verify_results.py: independent post-recovery comparisons
+  scripts/show_keys.py: only numeric recovered keys, not API credentials
+  run_demo.sh: backup first, then fresh full capture/analysis
+  run_analysis.sh: analyze existing capture; no new model request
+  web_demo.py + web_ui/: optional browser front end/API bridge
+  run_web_demo.sh: optional live web launcher with capture when WSL root
+
+18. WHY PYTHON3.12 / WHY WSL?
+============================
+Provided executable is Linux/Python3.12. Preserving its embedded code means
+live runtime uses matching WSL Python3.12. Windows Python3.14 cannot directly
+load that same module. Windows can still show saved HTML/PDF and run the
+separate saved-only web preview because it never executes original code.
+
+Source cipher/protocol functions are not silently rewritten. The adapter
+changes model calls to Gemini, restricts bind to127.0.0.1, and preserves
+original armor, mood-key logic, response cleaning and TCP behavior.
+The original startup banner says Groq-backed; the preceding adapter banner
+and saved backend metadata identify Gemini as the actual model provider.
+
+19. THREE DEMONSTRATION MODES - DIFFERENCE SAMJHEIN
+=================================================
+A) Saved static viewer (recommended when no live run is needed):
+   Open Open_Pre_Demo.url / Pre_Demo/index.html.
+   No server, API, internet, WSL terminal command or model run needed.
+   Results are clearly labeled as recorded, not live.
+
+B) Raw-TCP live lab:
+   Run run_demo.sh with the exact WSL command in DEMO_GUIDE.txt.
+   Calls Gemini, captures packets, runs all five, attacks and verifies.
+   Internet/key needed. Original evidence is backed up before replacement.
+
+C) Optional browser live UI:
+   Run web_demo.py under WSL3.12 through run_web_demo.sh.
+   Open http://127.0.0.1:8765 . Page can show saved results or run cases live.
+   Raw underlying protocol still TCP9999; web UI is presentation/control.
+   Fresh JSON records/capture go to web_runs/, not the saved pre-demo folder.
+   Windows --saved-only preview disables live buttons honestly.
+   Native end-to-end browser/Gemini verification status is in the audit.
+
+HTML interface is optional, not a Gemini requirement. Gemini API can be
+used by a terminal client/backend; no webpage is needed just to use Gemini.
+
+20. BEST SAVED DEMO ORDER
+=========================
+1) Overview: actual recorded model, run time, five sessions, PASS.
+2) Inputs: five fictional concerns/moods.
+3) Captured JSON/ciphertexts: expand a complete session.
+4) Recovered keys: explain a,b, inverse and312 keys.
+5) Mathematical proof: equations/Euclid.
+6) Full decrypted input/reply: compare with original test data.
+7) Frequency charts and full CSV table.
+8) Actual desktop screenshots and raw PCAP/TShark exports.
+9) Independent verification + actual analysis PASS log.
+10) Code and security alternatives.
+
+You can show all of this from saved files. Sirf instructor agar live
+behavior specifically mange, tab fresh live mode start karna optional hai.
+
+21. SECURITY FINDINGS / LESSONS
+==============================
+1) Tiny312-key space makes exhaustive search practical.
+2) Monoalphabetic substitution preserves letter/word patterns.
+3) Cleartext mood exposes deterministic key selection.
+4) Encoding/armor is not a replacement for strong encryption.
+5) Repeated names/wording can support known-plaintext guesses.
+6) A fixed disclaimer would strengthen that clue IF actually present.
+   Original server does not enforce such a fixed disclaimer; none was
+   invented/added just to claim a successful attack.
+7) Original server writes plaintext admin logs; transport encryption alone
+   does not protect those files from local access.
+8) The original therapist-role prompt is preserved for lab compatibility;
+   it is inappropriate for a real clinical product. Outputs are test data.
+
+Better alternative1: UNIX domain socket in a private directory, owner-only
+permissions and peer-credential checks. It supplies local access control,
+not magical encryption against a privileged host attacker.
+Better alternative2: authenticated TLS1.3 for TCP, with verified trust or
+certificate pinning. Self-signed certificates need explicit trusted setup;
+disabling certificate verification defeats authentication. Protect private
+keys and plaintext logs; consider mutual TLS for client identity.
+
+22. WHAT THIS PROJECT DOES NOT PROVE
+====================================
+- It does not break modern HTTPS/TLS.
+- It does not benchmark Gemini intelligence or clinical quality.
+- It does not establish a general security score for every possible text.
+- It does not make cloud model processing offline/private to the PC.
+- It does not turn a changed screenshot date into a real capture timestamp.
+- It does not guarantee marks; written requirements/exceptions still matter.
+
+23. KEEP PRIVATE / KEEP CONSISTENT
+==================================
+Never print, screenshot or submit the local .env/API key.
+API key is different from public recovered a,b values.
+Saved evidence pack was checked for API-key exclusion.
+Do not mix an old CSV/key JSON with a new capture and call them one run.
+Do not call saved display a live model run.
+For a fresh run, preserve old data before overwriting it.
+Screenshots support evidence; raw capture and independent checks remain
+the primary technical record. Actual timestamps remain unchanged in logs.
+
+24. SOURCES
+============
+Instructor repository: https://github.com/maadilrehman/PsycoSupport
+Current assignment: assign 2 revised.docx in this project.
+Gemini API: https://ai.google.dev/api/generate-content
+WSL/VS Code: https://code.visualstudio.com/docs/remote/wsl
+TShark manual: https://www.wireshark.org/docs/man-pages/tshark.html
+UNIX sockets: https://man7.org/linux/man-pages/man7/unix.7.html
+TLS1.3: https://www.rfc-editor.org/info/rfc9846
+English frequencies: Lewand, Cryptological Mathematics (2000).
+
+The next notes file records our project discussion and viva answers.
+
+25. FINAL LIVE WEB VALIDATION RESULT
+===================================
+The optional live browser UI was tested with all five fresh Gemini cases.
+All passed; no JavaScript errors. The final capture had five complete sessions,
+15 ciphertext fields and zero drops, and matched the saved live JSON records.
+Those records are in live_web_validation/, separately from the earlier
+Pre_Demo run. Server and capture processes were stopped after testing.

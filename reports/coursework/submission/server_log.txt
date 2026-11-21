@@ -1,0 +1,7 @@
+Backend: Gemini / gemini-3.5-flash-lite; capture: loopback TCP 9999
+[SERVER] Groq-backed | Listening on 127.0.0.1:9999
+[('127.0.0.1', 45904)] user=Rohaan mood=3 msg_len=86
+[('127.0.0.1', 45908)] user=Rohaan mood=4 msg_len=103
+[('127.0.0.1', 57568)] user=Rohaan mood=5 msg_len=108
+[('127.0.0.1', 57582)] user=Rohaan mood=6 msg_len=104
+[('127.0.0.1', 34640)] user=Rohaan mood=7 msg_len=122

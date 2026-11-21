@@ -1,0 +1,40 @@
+{
+  "mode": "replay",
+  "files": [
+    {
+      "path": "capture.pcap",
+      "bytes": 9831,
+      "sha256": "8136fa1c8ca38f036803262018a42fe0405e63e0c4667a811c73f2060e1ba5b1"
+    },
+    {
+      "path": "capture_stats.txt",
+      "bytes": 163,
+      "sha256": "60bc281a5faee5dd2f2a685808870501b01f5421b832faf35b587df5b6f9e0fd"
+    },
+    {
+      "path": "ciphertexts.csv",
+      "bytes": 5693,
+      "sha256": "847c65e23f38796e87fd40660219827b44da8774a2c36615e5b5f9719c9cb5d8"
+    },
+    {
+      "path": "decrypted_sessions.txt",
+      "bytes": 4838,
+      "sha256": "06c848548c7afe4cae5be33016c871fee634cea633ce07e789d9e9e4d7ebe66d"
+    },
+    {
+      "path": "key_recovery_proof.txt",
+      "bytes": 2040,
+      "sha256": "5d868a7c7234bade28c2debe1bc15e7ce0a1272e295d3a5cb7ee37b47178bf39"
+    },
+    {
+      "path": "result.json",
+      "bytes": 49662,
+      "sha256": "7394acd3c009d04ba32e938a73b9bed905485f0af55617626c3e14cd97411e22"
+    },
+    {
+      "path": "summary.csv",
+      "bytes": 229,
+      "sha256": "b5a6b6db273b6051975a976ef928a9ac6ba5bf534769ae7fe44cc5dd4c34315d"
+    }
+  ]
+}

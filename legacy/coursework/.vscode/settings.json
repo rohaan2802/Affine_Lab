@@ -1,0 +1,7 @@
+{
+  "python.defaultInterpreterPath": "/home/codetech/psycare_lab/.venv/bin/python",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "files.eol": "\n",
+  "editor.fontSize": 15,
+  "terminal.integrated.fontSize": 15
+}

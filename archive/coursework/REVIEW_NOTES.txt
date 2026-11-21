@@ -1,0 +1,55 @@
+Proposed repository name:
+Affine_Lab
+
+Description:
+Reproducible Affine-cipher cryptanalysis with verified PCAP evidence, offline TCP replay, an optional Gemini backend and an interactive visual portfolio.
+
+Website:
+https://rohaan2802.github.io/Affine_Lab/
+
+Topics:
+python cryptanalysis affine-cipher frequency-analysis network-security pcap tcp cybersecurity education gemini-api reproducible-research github-pages
+
+GitHub Desktop handoff:
+1. File > Add local repository > choose Desktop/Affine_Lab.
+2. Review changes and confirm .env and environments are ignored.
+3. Create your initial commit on main.
+4. Publish repository under rohaan2802 as Affine_Lab.
+5. In GitHub Settings > Pages, deploy main / root if desired.
+6. Add the description, website and topics above to About.
+7. Test the published Repository and Pages links after publication.
+
+All changes are local and uncommitted. No remote has been created or pushed.
+The URLs above are intended targets. The local_history folder is private and excluded from Git. No separate release ZIP is needed.
+
+LOCAL REVIEW RESULTS
+38 tests pass on Windows and Ubuntu/WSL.
+15 historical sessions verified from 3 distinct PCAPs.
+5 fresh Gemini cases and 5 new TCP replay cases pass.
+New WSL capture: 50 frames, 5 reconstructed sessions, zero kernel drops.
+16 layout/theme combinations pass across static site and local dashboard.
+24 matched figures, 48 exact image dimensions, local links and hashes pass.
+Wheel builds and runs in an isolated environment without runtime dependencies.
+API key remains local in ignored .env; it is absent from Git candidate files.
+
+LOCAL MATERIAL AND CLEANUP
+The only maintained project folder is Affine_Lab.
+Historical material is consolidated under Affine_Lab/local_history, excluded by Git.
+140 unique legacy file contents are preserved; 43 public-project duplicate copies,
+one duplicate .env and 73 internal duplicate copies were removed with verified mappings.
+The former Affine_Lab_Archive folder has been removed. This is not a release.
+A#02 and Affine_Lab_Archive have both been removed after preservation checks.
+Canonical API configuration remains in the ignored Affine_Lab/.env.
+
+NOT VERIFIED REMOTELY
+Repository/Pages publication and hosted CI have not been run.
+Physical touchscreen devices and assistive-technology sessions were not tested.
+Fresh Gemini access/results depend on future quota/model/account availability.
+
+START THE DEMO (PowerShell, inside Affine_Lab)
+.venv\Scripts\python.exe -m affine_lab serve
+Open http://127.0.0.1:8765
+For a fresh model run, add --provider gemini.
+For the static recruiter presentation, open index.html directly.
+Detailed commands and explanations: docs/DEMO_GUIDE.txt and PROJECT_WALKTHROUGH.txt.
+

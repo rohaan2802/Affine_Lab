@@ -1,0 +1,20 @@
+[
+  {
+    "root": "Desktop",
+    "desktop_pngs_checked": 17,
+    "pdfs_checked": 2,
+    "png_copies_updated": [],
+    "pdf_copies_updated": [],
+    "unrecognized_date_regions": [],
+    "recognized_old_date_regions_remaining": 0
+  },
+  {
+    "root": "WSL",
+    "desktop_pngs_checked": 53,
+    "pdfs_checked": 3,
+    "png_copies_updated": [],
+    "pdf_copies_updated": [],
+    "unrecognized_date_regions": [],
+    "recognized_old_date_regions_remaining": 0
+  }
+]

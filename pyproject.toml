@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "affine-lab"
+version = "1.0.0"
+description = "Reproducible Affine-cipher cryptanalysis, verified PCAP evidence and a local replay dashboard."
+readme = "README.md"
+requires-python = ">=3.12"
+license = "MIT"
+authors = [{name = "Mohammad Rohaan"}]
+dependencies = []
+keywords = ["affine-cipher", "cryptanalysis", "pcap", "frequency-analysis"]
+
+[project.optional-dependencies]
+dev = ["build>=1.2", "matplotlib>=3.8", "Pillow>=10", "playwright>=1.48"]
+
+[project.scripts]
+affine-lab = "affine_lab.cli:main"
+
+[project.urls]
+Repository = "https://github.com/rohaan2802/Affine_Lab"
+Documentation = "https://rohaan2802.github.io/Affine_Lab/"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+affine_lab = ["resources/*.json", "web/*.html", "web/*.css", "web/*.js", "web/*.svg"]

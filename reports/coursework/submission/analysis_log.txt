@@ -1,0 +1,4 @@
+Analysis time: 2026-11-18T23:07:28+05:00
+Captured 5 complete sessions, 15 exact ciphertext fields.
+Recovered and decrypted all five sessions; 312 candidates tested per session.
+PASS: all five recovered keys, request fields, replies and round trips match.

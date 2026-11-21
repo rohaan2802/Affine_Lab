@@ -1,0 +1,82 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Demo: Offline TCP replay",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "problemMatcher": [],
+      "args": [
+        "-m",
+        "affine_lab",
+        "demo"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Demo: Local browser dashboard",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "problemMatcher": [],
+      "args": [
+        "-m",
+        "affine_lab",
+        "serve"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Verify: Recorded capture",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "problemMatcher": [],
+      "args": [
+        "-m",
+        "affine_lab",
+        "verify",
+        "data/recorded/tcp_baseline"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Test: Correctness suite",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "problemMatcher": [],
+      "group": "test",
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    },
+    {
+      "label": "Demo: Fresh Gemini dashboard",
+      "type": "process",
+      "command": "${command:python.interpreterPath}",
+      "problemMatcher": [],
+      "args": [
+        "-m",
+        "affine_lab",
+        "serve",
+        "--provider",
+        "gemini"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      }
+    }
+  ]
+}

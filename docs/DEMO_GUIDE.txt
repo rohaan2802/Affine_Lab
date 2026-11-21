@@ -1,0 +1,94 @@
+AFFINE LAB — FIVE-MINUTE DEMO
+
+Goal in simple words
+We show why an Affine substitution cipher cannot protect a conversation.
+The client sends an encoded username and concern to a local server. The server
+decodes them, gets an English reply, encrypts that reply and sends it back.
+A separate analyzer sees only the reply ciphertext, tries 312 valid keys,
+scores their English letter frequencies and recovers the most plausible text.
+After recovery, independent checks compare it with the client and known inputs.
+
+1. SETUP (Windows PowerShell; inside Affine_Lab)
+py -3 -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install -e .
+python -m affine_lab doctor
+
+WSL Ubuntu alternative (same folder through /mnt/c, no second copy needed)
+cd /mnt/c/Users/CodeTech/Desktop/Affine_Lab
+python3 -m venv .venv-wsl
+source .venv-wsl/bin/activate
+python -m pip install -e .
+Do not activate a Windows virtual environment inside WSL.
+If venv is missing, install Ubuntu's python3-venv package first.
+
+2. SHOW REAL SAVED EVIDENCE (no internet, no elevated privileges)
+python -m affine_lab verify data/recorded/tcp_baseline
+python -m affine_lab inspect-pcap data/recorded/tcp_baseline/capture.pcap
+Expected: five verified sessions and a matching capture hash; 50 frames.
+Open reports/evidence_verification.json for all 15 historical sessions.
+
+3. RUN A NEW LOCAL TCP REPLAY (no model or internet)
+python -m affine_lab demo
+Expected keys for cases 1–5: (7,6), (9,8), (11,10), (15,12), (15,14).
+Results appear in the terminal. The printed runs/<timestamp>/ path contains
+result.json, summary.csv, ciphertexts.csv, proof, decrypted text and hashes.
+These replies are recorded Gemini text. The local TCP exchange and analysis
+are new; this mode does not make a fresh model call or record packets.
+
+4. OPTIONAL LOCAL BROWSER DEMO
+python -m affine_lab serve
+Open http://127.0.0.1:8765
+Inspect saved corpus, run one case or all five, open proofs and download results.
+The provider is selected once when starting the server. Stop with Ctrl+C.
+VS Code: top menu Terminal > Run Task > choose the named Demo/Verify task.
+Command output is in VS Code's Terminal panel. This is not the Problems panel.
+
+5. OPTIONAL FRESH GEMINI
+Copy .env.example to .env and set GEMINI_API_KEY locally. Never share it.
+python -m affine_lab serve --provider gemini
+or
+python -m affine_lab demo --provider gemini
+GEMINI_MODEL can select a model available to your own account. The supplied
+default is gemini-3.5-flash-lite. Availability, quotas and output vary.
+Gemini generates a new English reply; it does not break the cipher.
+No Gemini browser chat, remote website or WSL is required. The local server
+uses Gemini's HTTPS API. Its TLS connection is separate from the deliberately
+weak local Affine exchange. TLS remains encrypted in a packet capture.
+There is no silent switch to recorded replies if a fresh API request fails.
+
+6. EXPLAIN THE MATH
+A=0, B=1, ... Z=25.
+Encryption: C = (a*P+b) mod 26.
+Decryption: P = inverse(a)*(C-b) mod 26.
+a multiplies the letter number; b shifts it. gcd(a,26) must be 1.
+There are 12 valid multipliers and 26 shifts: 12*26 = 312 keys.
+For a=7,b=6, inverse(a)=15 because 7*15=105=4*26+1.
+E=4 becomes I=8; T=19 becomes J=9.
+15a=1 (mod26), so a=7; b=8-4*7 mod26=6.
+These are correspondences of the winning candidate, not an assumption that
+the two most frequent letters are always E and T.
+Chi-square = sum((observed-expected)^2/expected), over the 26 letters.
+Expected = total letters * English frequency / 100. Smaller scores fit better.
+The analyzer counts the ciphertext once and permutes 26 bins for each key,
+instead of decrypting the full message 312 times. It then decrypts the winner.
+
+7. TERMS
+Plaintext: readable original text. Ciphertext: substituted letters.
+Affine key: the pair (a,b). Modular inverse: the multiplier that undoes a.
+Nibble armor: each UTF-8 byte becomes two A–P letters before substitution;
+this reversible representation is encoding, not extra cryptographic security.
+The mood schedule is public and weak too, but the analyzer does not use mood
+to recover a key. It is consulted only in the separate verification stage.
+
+8. SHOW THE PORTFOLIO
+Open index.html. This static presentation and its cipher playground work
+without Gemini. It displays saved evidence, figures and links to source.
+The static page cannot host the Python TCP server or store an API key.
+
+9. LIMITS TO SAY HONESTLY
+Short/non-English text can rank badly. A top score is not a probability.
+These five concerns are synthetic and replies are not clinical advice.
+The PCAP reader handles this lab's classic IPv4 loopback captures, not all
+network protocols. There is no claim to decrypt TLS or attack outside systems.
+The 24 portfolio figures are generated from actual data, reports and source.

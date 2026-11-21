@@ -1,0 +1,25 @@
+# Private local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+# Local environments, caches and build products
+.venv/
+.venv-wsl/
+venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.coverage
+htmlcov/
+build/
+dist/
+# New runs are local; reviewed recorded datasets are explicitly maintained.
+runs/
+*.log
+Thumbs.db
+desktop.ini
+.DS_Store
+~$*

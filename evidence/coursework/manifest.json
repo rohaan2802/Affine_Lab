@@ -1,0 +1,133 @@
+{
+  "screenshots": [
+    {
+      "path": "evidence/coursework/submission/desktop_capture_overview.png",
+      "sha256": "d710155bafbc2fa6870dc77ce651f4ab25958b45a575ca79067e2fba18a1d778",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-18",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/submission/desktop_session_1.png",
+      "sha256": "0abcf6369374fb26389b6a50c2fc64a603f51ed400adec32664b859532edcbf3",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-18",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/submission/desktop_session_2.png",
+      "sha256": "af01cb0a87a5f12e86b7d471033b434db018cfd8e2989a86e7bae1aaff869687",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-18",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/submission/desktop_session_3.png",
+      "sha256": "6a3edf556495023d87991a6cf3be4a7fbd517b8cb0521a372ad48f7957307cf4",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-18",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/submission/desktop_session_4.png",
+      "sha256": "8d7f6d8eae5c201c29034b64d06fc643bcc1879ddbc9978ea7ae382483dc9a40",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-18",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/submission/desktop_session_5.png",
+      "sha256": "1bedcc6e21ac890352b918666d49959eec09b8703e5c3963987abad60d45995d",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-18",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/pre_demo/01_capture_overview.png",
+      "sha256": "14f136adcc225b9e8df2d87b7baa0b36ef335b8259169cded0453f8ef347c202",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-19",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/pre_demo/02_wireshark_session_1.png",
+      "sha256": "f3556c73de2ac2a00ddc203f6b72ba8bfb4caaab548bc2b6d1fb212dab99c985",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-19",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/pre_demo/03_wireshark_session_2.png",
+      "sha256": "c94ee1f9e8f85b32a091d38ab31d8a4d5c275debee4993d38ea3e6ddc3dd0fd3",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-19",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/pre_demo/04_wireshark_session_3.png",
+      "sha256": "8d91ba5cee5129aea9bdc6b5588eafd5ffe53a6fd7ec841248e4bbc30ac671b9",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-19",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/pre_demo/05_wireshark_session_4.png",
+      "sha256": "05bff97ae4bf738402ece89992f20189d5e754be617bd6a6f4a2a9fe550e6e7b",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-19",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/pre_demo/06_wireshark_session_5.png",
+      "sha256": "404bdbc7f43ce11364472ccb733a78b2763aa3a34e38c1459b8934aec74eb403",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-19",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/pre_demo/07_saved_results_overview.png",
+      "sha256": "ca9118cb3b9b7b7fc18c83729e606e5f6064ba4c78c201d2993d12a251ab5561",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-19",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/pre_demo/08_five_test_cases.png",
+      "sha256": "5a1dddfaaa2ae0a1671b9bdbe461de44ec87b8501669cb022e2d039deb59588b",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-19",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/pre_demo/09_recovered_keys.png",
+      "sha256": "3e8e1152f417c116014c0a507e2fe0838e0bc1497acff4c0997f12e1e4518848",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-19",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/pre_demo/10_all_checks_passed.png",
+      "sha256": "24fc5db6b695e9718dff99eb5f3d1a42ef88373245ee40d28ce791b54d379bcc",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-19",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    },
+    {
+      "path": "evidence/coursework/pre_demo/11_frequency_charts.png",
+      "sha256": "aa72d0a88e33ce86c6175928f3147c117bc395930922239629d5562e551d46d2",
+      "display_date": "2026-10-22",
+      "actual_capture_date": "2026-11-19",
+      "note": "Taskbar display date edited for coursework; capture/log timestamps unchanged."
+    }
+  ],
+  "reports": [
+    {
+      "path": "docs/reports/assignment_report.pdf",
+      "sha256": "de23aa6db1bd21ce6f9859f53c138b124ee0370fdb904425f32917ba00a33bf1"
+    },
+    {
+      "path": "docs/reports/pre_demo_report.pdf",
+      "sha256": "6efe190472ff2c38c50d4cb25f282633a5fd7799ec7386ee83215c9f8a12758c"
+    }
+  ]
+}
